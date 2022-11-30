@@ -1,0 +1,17 @@
+{
+  "/mcafoportal": {
+    "target": "https://www.mca.gov.in/",
+    "secure": true,
+    "loglevel": "debug",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "http://www.safehiring-env.eba-n9mnmkmw.ap-south-1.elasticbeanstalk.com/v1/",
+    "secure": true,
+    "loglevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

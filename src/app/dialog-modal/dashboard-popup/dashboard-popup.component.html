@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Welcome to EMS Portal</h1>
+<div mat-dialog-content>
+  <p>Please Select your Role</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>--Select Your Role</mat-option>
+      <mat-option value="Employee">Employee</mat-option>
+      <mat-option value="Employeer">Employeer</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="d-grid gap-2 d-md-block">
+  <button (click)="submit()" class="btn btn-primary" type="button">Submit</button>
+</div>

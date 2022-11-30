@@ -1,0 +1,27 @@
+<div class="formConatiner">
+    <form autoComplete="off" [formGroup]="registerForm">
+      <div class="brand">
+        <img src="/assets/logo.svg" alt="" srcSet="" />
+        <h1>EMS</h1>
+      </div>
+      <div class="conatiner">
+        <div class="col-md-6">
+          <input formControlName="safeHiringRegistration" type="text" name="safeHiringRegistration" id="" placeholder="Safe Hiring Registration" />
+          <input formControlName="panCard" type="text" name="panCard" id="" placeholder="Pan Card" />
+          <input formControlName="name" maxlength="16" type="text" name="name" id="" placeholder="Name" />
+          <input formControlName="email" type="email" name="email" id="" placeholder="email" />
+          <input formControlName="permanentAddress" type="text" name="permanentAddress" id="" placeholder="Permanent Address" />
+        </div>
+        <div class="col-md-6" style="float: right;margin-top: -376px;margin-right: -11px;" >
+          <input formControlName="preferredWorkLocation" type="text" name="preferredWorkLocation" id="" placeholder="Preferred Work Location"/>
+          <input formControlName="password" type="password" name="password" id="" placeholder="password"/>
+          <input formControlName="phoneNo" type="text" name="phoneNo" id="" placeholder="phoneNo" />
+          <input formControlName="dob" type="date" name="dob" id="" placeholder="dob" />
+          <input formControlName="address" type="text" name="dob" id="" placeholder="Address" />
+        </div>
+      </div>
+      <button (click)="submit()" type="submit" name="" id="">Register</button>
+      <span> Already have an account ? <a href="/login">Login</a> </span>
+    </form>
+  </div>
+  
