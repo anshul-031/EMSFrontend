@@ -5,9 +5,11 @@ import { HttpClient } from "@angular/common/http";
 })
 export class AuthService {
   constructor(private http: HttpClient) { }
-  readonly baseurl = '/api/employer/'
+  readonly baseurl = 'http://localhost:8080/v1/api/register/'
   register(values: any) {
-    return this.http.post(this.baseurl + 'save', values);
+    return this.http.post(this.baseurl + 'employer', values, {
+      responseType: 'text'
+    });
   }
   login(values: any) {
     return this.http.post(this.baseurl + 'login', values);

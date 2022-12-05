@@ -16,7 +16,8 @@ export class DashboardPopupComponent implements OnInit {
   }
   submit(){
     this.dialog.closeAll();
-    localStorage.setItem("role",JSON.stringify(this.selected))
+    //localStorage.setItem("role",JSON.stringify(this.selected))
+    localStorage.setItem("role",this.selected)
     this.router.navigateByUrl("/register")
     
   }

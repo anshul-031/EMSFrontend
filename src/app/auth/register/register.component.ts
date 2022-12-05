@@ -13,12 +13,13 @@ export class RegisterComponent implements OnInit {
   constructor(private fb:FormBuilder,private service:AuthService,private router:Router) { }
   registerForm=this.fb.group({
     username:'',
-    companyName:'',
+    orgName:'',
     cinNumber:'',
     website:'',
     mobile:'',
-    emailId:'',
-    password:''
+    email:'',
+    password:'',
+    country: 'India'
   })
   roles=false;
   ngOnInit(): void {
@@ -31,13 +32,19 @@ export class RegisterComponent implements OnInit {
     
   }
   submit(){
-    return this.service.register(this.registerForm.value).subscribe(res=>{
-      this.router.navigateByUrl("/login")
-    },err=>{
-      console.log(err);
-      
-    })
-    
+    return this.service.register(this.registerForm.value).subscribe({
+      next: (response) => {
+        alert(response);
+        this.router.navigateByUrl("/login")
+      },
+      error: (err: any) => {
+        console.log(err);
+        alert(err);
+      } 
+    });    
   }
-
+  comingSoon(){
+    alert("Employee signup feature is coming soon!");
+    this.router.navigateByUrl("/");
+  }
 }
