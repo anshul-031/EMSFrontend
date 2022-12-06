@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './auth/dashboard/dashboard.component';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ForgetComponent } from './auth/forget/forget.component';
 import { ResetComponent } from './auth/reset/reset.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +17,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from "@angular/material/select";
 import { PricingComponent } from './Main/pricing/pricing.component';
 import { DeveloperComponent } from './Main/developer/developer.component';
+import { AuthInterceptor } from './_auth/auth.interceptor';
+import { AuthGuard } from './_auth/auth.guard.service';
+import { UserService } from './_services/user.service';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,8 @@ import { DeveloperComponent } from './Main/developer/developer.component';
     ResetComponent,
     DashboardPopupComponent,
     PricingComponent,
-    DeveloperComponent
+    DeveloperComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,15 @@ import { DeveloperComponent } from './Main/developer/developer.component';
     MatFormFieldModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

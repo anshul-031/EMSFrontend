@@ -5,8 +5,10 @@ import { ForgetComponent } from './auth/forget/forget.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ResetComponent } from './auth/reset/reset.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { DeveloperComponent } from './Main/developer/developer.component';
 import { PricingComponent } from './Main/pricing/pricing.component';
+import { AuthGuard } from './_auth/auth.guard.service';
 
 const routes: Routes = [
 	{ path: "register", component: RegisterComponent },
@@ -15,7 +17,8 @@ const routes: Routes = [
 	{ path: "forget", component: ForgetComponent },
 	{ path: "reset/:id", component: ResetComponent },
 	{ path: "pricing", component: PricingComponent },
-	{ path: "developer", component: DeveloperComponent }
+	{ path: "developer", component: DeveloperComponent, canActivate:[AuthGuard], data:{roles:['ADMIN']} },
+	{ path: 'forbidden', component: ForbiddenComponent }
 ];
 
 @NgModule({

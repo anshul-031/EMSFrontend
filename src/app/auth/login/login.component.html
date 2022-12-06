@@ -1,17 +1,17 @@
 <div class="formConatiner">
-    <form autoComplete="off" [formGroup]="loginForm">
+    <form autoComplete="off" (ngSubmit)="submit()" [formGroup]="loginForm" novalidate>
       <div class="brand">
         <img src="/assets/logo.svg" alt="" srcSet="" />
         <h1>EMS</h1>
       </div>
       <div class="conatiner">
         <div class="col-md-6">
-          <input formControlName="emailId" type="email" name="username" id="" placeholder="Email Id" />
-          <input formControlName="password" type="password" name="username" id="" placeholder="Password" />
+          <input formControlName="username" type="email" name="username" id="" placeholder="Email Id" />
+          <input formControlName="userpwd" type="password" name="userpwd" id="" placeholder="Password" />
         </div>
       </div>
-      <button (click)="submit()" type="submit" name="" id="">Login</button>
-      <span> Create an account ? <a href="/register">Register</a> </span>
+      <button type="submit" [disabled]="loginForm.pristine || loginForm.invalid" type="submit" name="" id="">Login</button>
+      <span> Create an account ? <a [routerLink]="['/register']" >Register</a> </span>
     </form>
   </div>
   

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/shared/auth.service';
+import { UserAuthService } from '../../_services/user-auth.service';
+import { UserService } from '../../_services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -10,25 +11,41 @@ import { AuthService } from 'src/app/shared/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private fb:FormBuilder,private service:AuthService,private router:Router) { }
-  loginForm=this.fb.group({
-    emailId:'',
-    password:''
+  constructor(private fb: FormBuilder,
+    private router: Router,
+    private userService: UserService,
+    private userAuthService: UserAuthService,) { }
+  loginForm = this.fb.group({
+    username: ['', Validators.required],
+    userpwd: ['', Validators.required]
   })
 
   ngOnInit(): void {
   }
-  submit(){
-    return this.service.login(this.loginForm.value).subscribe(res=>{
-      const data=JSON.parse(JSON.stringify(res));    
-      
-      localStorage.setItem("res",JSON.stringify(data.data));
-      this.router.navigateByUrl("/")
-    },err=>{
-      console.log(err);
-      
-    })
-    
+
+  parseJwt(token: string) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+  }
+
+  submit() {
+    console.info(this.loginForm.value);
+    this.userService.login(this.loginForm.value).subscribe(
+      (response: any) => {
+        this.userAuthService.setToken(response.token);
+        console.info(this.parseJwt(response.token))
+        this.userAuthService.setRoles(this.parseJwt(response.token).roles);
+        this.router.navigate(['/'])
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

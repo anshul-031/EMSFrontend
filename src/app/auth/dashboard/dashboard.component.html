@@ -12,9 +12,10 @@
 					<li><a href="#contactus">Contact Us</a></li>
 
 				</ul>
-				<ul class=" nav-links" style="justify-content: flex-end;">
-					<li><a href="/login">Login</a></li>
-					<li>
+				<ul class="nav-links" style="justify-content: flex-end;">
+					<li><a *ngIf="!isLoggedIn()" [routerLink]="['/login']">Login</a>
+						<a *ngIf="isLoggedIn()" (click)="logout()">Logout</a></li>
+					<li *ngIf="!isLoggedIn()">
 						<span (click)="openDialog()" class="cta"><button>Sign Up</button></span>
 						<ul>
 							<li class="cta"><button>Employee</button></li>
