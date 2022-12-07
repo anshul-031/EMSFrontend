@@ -43,6 +43,7 @@ img {
   text-decoration: none;
   color: #b36fd0;
   text-transform: uppercase;
+  cursor: pointer;
 }
 ul li .cta button {
   padding: 10px 30px;
@@ -88,7 +89,6 @@ h1 .h1-heading span {
     #e5747b 80%,
     #f2a460 100.86%
   );
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .text {

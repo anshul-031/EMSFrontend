@@ -58,6 +58,10 @@
     text-transform: uppercase;
     transition: 0.5s ease-in-out;
   }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
   button:hover {
     background-color: #4e0eff;
     outline: none;
