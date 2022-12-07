@@ -1,23 +1,24 @@
-<div class="formConatiner" *ngIf="!roles">
-  <form autoComplete="off" [formGroup]="registerForm">
+<div class="formConatiner">
+  <form autoComplete="off" (ngSubmit)="submit()" [formGroup]="registerForm">
     <div class="brand">
       <img src="/assets/logo.svg" alt="" srcSet="" />
       <h1>EMS</h1>
     </div>
     <div class="conatiner">
       <div class="col-md-6">
-        <input formControlName="username" type="text" name="username" id="" placeholder="username" />
-        <input formControlName="mobile" type="text" name="username" id="" placeholder="mobile Number" />
-        <input formControlName="cinNumber" type="text" name="username" id="" placeholder="CIN number" />
-        <input formControlName="companyName" type="text" name="username" id="" placeholder="Company Name" />
+        <input formControlName="email" type="email" name="email" id="" placeholder="Email" />
+        <input formControlName="mobile" maxlength="10" type="text" name="mobile" id="" placeholder="Mobile number" />
+        <input formControlName="country" type="text" name="country" id="" placeholder="Country" />
+        <input formControlName="orgName" type="text" name="orgName" id="" placeholder="Company name" />
       </div>
       <div class="col-md-6" style="float: right;margin-top: -302px;margin-right: -11px;" >
-        <input formControlName="website" type="text" name="username" id="" placeholder="Website"/>
-        <input formControlName="emailId" type="email" name="email" id="" placeholder="email Id" />
-        <input formControlName="password" type="password" name="Password" id="" placeholder="password" />
+        <input formControlName="website" type="text" name="website" id="" placeholder="Website"/>
+        <input formControlName="referredBy" type="text" name="referredBy" id="" placeholder="Referred by"/>
+        <input formControlName="password" type="password" name="password" id="" placeholder="Password" />
+        <!-- <input formControlName="password" type="password" name="password" id="" placeholder="Confirm Password" /> -->
       </div>
     </div>
-    <button (click)="submit()" type="submit" name="" id="">Register</button>
+    <button [disabled]="registerForm.pristine || registerForm.invalid" type="submit" name="" id="">Register</button>
     <span> Already have an account ? <a [routerLink]="['/login']">Login</a> </span>
   </form>
 </div>

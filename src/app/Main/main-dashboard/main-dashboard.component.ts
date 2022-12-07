@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { EmployeesService } from 'src/app/shared/Employees/employees.service';
+import { EmployeesService } from '../../shared/Employees/employees.service';
+import { UserAuthService } from '../../_services/user-auth.service';
 
 @Component({
   selector: 'app-main-dashboard',
@@ -10,45 +11,43 @@ import { EmployeesService } from 'src/app/shared/Employees/employees.service';
 })
 export class MainDashboardComponent implements OnInit {
   searchfunc = false;
-  mainfunc=true;
-  postfunc=false;
+  mainfunc = true;
+  postfunc = false;
   tableshow = false;
   updateShow = false;
   PANVALID = false;
   constructor(
     private service: EmployeesService,
     private fb: FormBuilder,
-    private router: Router
-  ) {}
+    private router: Router,
+    private userAuthService: UserAuthService
+  ) { }
   searchForm = this.fb.group({
     PanNumber: '',
   });
-  postForm=this.fb.group({
-    name:'',
-    company:'',
-    offerReceivedDate:Date,
-    joiningDate:Date,
-    jobTitle:'',
-    ctc:'',
-    panNumber:''
+  postForm = this.fb.group({
+    name: '',
+    company: '',
+    offerReceivedDate: Date,
+    joiningDate: Date,
+    jobTitle: '',
+    ctc: '',
+    panNumber: ''
   })
   users: any = [];
   ngOnInit(): void {
-    this.onAuthCheck();
+    
   }
-  onAuthCheck() {
-    debugger;
-    let data = JSON.parse(JSON.stringify(localStorage.getItem('res')));
-    debugger;
-    if (data == null) {
-      this.router.navigateByUrl('/login');
-    }
+
+  public setUserName() {
+    return this.userAuthService.getUserName();
   }
+
   onSearchFunctionality(value: number) {
     if (value == 0) {
       this.searchfunc = true;
-      this.mainfunc=false;
-      this.postfunc=false;
+      this.mainfunc = false;
+      this.postfunc = false;
     } else {
       window.location.reload();
       this.searchfunc = false;
@@ -57,8 +56,8 @@ export class MainDashboardComponent implements OnInit {
   onPostFunctionality(value: number) {
     if (value == 0) {
       this.postfunc = true;
-      this.mainfunc=false;
-      this.searchfunc=false;
+      this.mainfunc = false;
+      this.searchfunc = false;
     } else {
       window.location.reload();
       this.postfunc = false;
@@ -73,7 +72,7 @@ export class MainDashboardComponent implements OnInit {
       this.tableshow = false;
     }
   }
-  logout(){
+  logout() {
     localStorage.clear();
     this.router.navigateByUrl("/login");
   }
@@ -84,7 +83,7 @@ export class MainDashboardComponent implements OnInit {
         debugger
         this.users = JSON.parse(JSON.stringify(res));
         console.log(this.users);
-        
+
       },
       (err) => {
         console.log(err);
@@ -94,10 +93,10 @@ export class MainDashboardComponent implements OnInit {
   onupdateFunctionality(values: number) {
     this.updateShow = true;
   }
-  createOffer(){
-    this.service.createOffer(this.postForm.value).subscribe(res=>{
+  createOffer() {
+    this.service.createOffer(this.postForm.value).subscribe(res => {
       window.location.reload();
-    },err=>{
+    }, err => {
       console.log(err);
       alert(err.message);
     })
