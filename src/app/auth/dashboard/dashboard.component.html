@@ -18,8 +18,8 @@
 					<li *ngIf="!isLoggedIn()">
 						<span (click)="openDialog()" class="cta"><button>Sign Up</button></span>
 						<ul>
-							<li class="cta"><button>Employee</button></li>
-							<li class="cta"><button>Employeer</button></li>
+							<li class="cta"><button (click)="navigateByRole('Employee')" >Employee</button></li>
+							<li class="cta"><button (click)="navigateByRole('Employeer')">Employeer</button></li>
 						</ul>
 					</li>
 				</ul>

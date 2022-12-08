@@ -2,18 +2,10 @@
   <div class="row p-0 m-0 proBanner" id="proBanner">
   </div>
   <!-- partial:partials/_navbar.html -->
-  <nav
-    class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row"
-  >
-    <div
-      class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start"
-    >
+  <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
       <div class="me-3">
-        <button
-          class="navbar-toggler navbar-toggler align-self-center"
-          type="button"
-          data-bs-toggle="minimize"
-        >
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
           <span class="icon-menu"></span>
         </button>
       </div>
@@ -30,35 +22,26 @@
       <ul class="navbar-nav">
         <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
           <h1 class="welcome-text">
-            Good Morning, <span class="text-black fw-bold">John Doe</span>
+            Good Morning, <span class="text-black fw-bold">{{setUserName()}}</span>
           </h1>
           <h3 class="welcome-sub-text">Your performance summary this week</h3>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item dropdown d-none d-lg-block">
-          <a
-            class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split"
-            id="messageDropdown"
-            href="#"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+          <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown" href="#"
+            data-bs-toggle="dropdown" aria-expanded="false">
             Select Category
           </a>
-          <div
-            class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
-            aria-labelledby="messageDropdown"
-          >
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+            aria-labelledby="messageDropdown">
             <a class="dropdown-item py-3">
               <p class="mb-0 font-weight-medium float-left">Select category</p>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item preview-item">
               <div class="preview-item-content flex-grow py-2">
-                <p
-                  class="preview-subject ellipsis font-weight-medium text-dark"
-                >
+                <p class="preview-subject ellipsis font-weight-medium text-dark">
                   Bootstrap Bundle
                 </p>
                 <p class="fw-light small-text mb-0">
@@ -68,9 +51,7 @@
             </a>
             <a class="dropdown-item preview-item">
               <div class="preview-item-content flex-grow py-2">
-                <p
-                  class="preview-subject ellipsis font-weight-medium text-dark"
-                >
+                <p class="preview-subject ellipsis font-weight-medium text-dark">
                   Angular Bundle
                 </p>
                 <p class="fw-light small-text mb-0">
@@ -80,9 +61,7 @@
             </a>
             <a class="dropdown-item preview-item">
               <div class="preview-item-content flex-grow py-2">
-                <p
-                  class="preview-subject ellipsis font-weight-medium text-dark"
-                >
+                <p class="preview-subject ellipsis font-weight-medium text-dark">
                   VUE Bundle
                 </p>
                 <p class="fw-light small-text mb-0">
@@ -92,9 +71,7 @@
             </a>
             <a class="dropdown-item preview-item">
               <div class="preview-item-content flex-grow py-2">
-                <p
-                  class="preview-subject ellipsis font-weight-medium text-dark"
-                >
+                <p class="preview-subject ellipsis font-weight-medium text-dark">
                   React Bundle
                 </p>
                 <p class="fw-light small-text mb-0">
@@ -105,10 +82,7 @@
           </div>
         </li>
         <li class="nav-item d-none d-lg-block">
-          <div
-            id="datepicker-popup"
-            class="input-group date datepicker navbar-date-picker"
-          >
+          <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
             <span class="input-group-addon input-group-prepend border-right">
               <span class="icon-calendar input-group-text calendar-icon"></span>
             </span>
@@ -118,34 +92,20 @@
         <li class="nav-item">
           <form class="search-form" action="#">
             <i class="icon-search"></i>
-            <input
-              type="search"
-              class="form-control"
-              placeholder="Search Here"
-              title="Search here"
-            />
+            <input type="search" class="form-control" placeholder="Search Here" title="Search here" />
           </form>
         </li>
         <li class="nav-item dropdown">
-          <a
-            class="nav-link count-indicator"
-            id="notificationDropdown"
-            href="#"
-            data-bs-toggle="dropdown"
-          >
+          <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
             <i class="icon-mail icon-lg"></i>
           </a>
-          <div
-            class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
-            aria-labelledby="notificationDropdown"
-          >
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+            aria-labelledby="notificationDropdown">
             <a class="dropdown-item py-3 border-bottom">
               <p class="mb-0 font-weight-medium float-left">
                 You have 4 new notifications
               </p>
-              <span class="badge badge-pill badge-primary float-right"
-                >View all</span
-              >
+              <span class="badge badge-pill badge-primary float-right">View all</span>
             </a>
             <a class="dropdown-item preview-item py-3">
               <div class="preview-thumbnail">
@@ -183,41 +143,26 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a
-            class="nav-link count-indicator"
-            id="countDropdown"
-            href="#"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+          <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown"
+            aria-expanded="false">
             <i class="icon-bell"></i>
             <span class="count"></span>
           </a>
-          <div
-            class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
-            aria-labelledby="countDropdown"
-          >
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+            aria-labelledby="countDropdown">
             <a class="dropdown-item py-3">
               <p class="mb-0 font-weight-medium float-left">
                 You have 7 unread mails
               </p>
-              <span class="badge badge-pill badge-primary float-right"
-                >View all</span
-              >
+              <span class="badge badge-pill badge-primary float-right">View all</span>
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item preview-item">
               <div class="preview-thumbnail">
-                <img
-                  src="/assets/images/faces/face10.jpg"
-                  alt="image"
-                  class="img-sm profile-pic"
-                />
+                <img src="/assets/images/faces/face10.jpg" alt="image" class="img-sm profile-pic" />
               </div>
               <div class="preview-item-content flex-grow py-2">
-                <p
-                  class="preview-subject ellipsis font-weight-medium text-dark"
-                >
+                <p class="preview-subject ellipsis font-weight-medium text-dark">
                   Marian Garner
                 </p>
                 <p class="fw-light small-text mb-0">The meeting is cancelled</p>
@@ -225,16 +170,10 @@
             </a>
             <a class="dropdown-item preview-item">
               <div class="preview-thumbnail">
-                <img
-                  src="/assets/images/faces/face12.jpg"
-                  alt="image"
-                  class="img-sm profile-pic"
-                />
+                <img src="/assets/images/faces/face12.jpg" alt="image" class="img-sm profile-pic" />
               </div>
               <div class="preview-item-content flex-grow py-2">
-                <p
-                  class="preview-subject ellipsis font-weight-medium text-dark"
-                >
+                <p class="preview-subject ellipsis font-weight-medium text-dark">
                   David Grey
                 </p>
                 <p class="fw-light small-text mb-0">The meeting is cancelled</p>
@@ -242,16 +181,10 @@
             </a>
             <a class="dropdown-item preview-item">
               <div class="preview-thumbnail">
-                <img
-                  src="/assets/images/faces/face1.jpg"
-                  alt="image"
-                  class="img-sm profile-pic"
-                />
+                <img src="/assets/images/faces/face1.jpg" alt="image" class="img-sm profile-pic" />
               </div>
               <div class="preview-item-content flex-grow py-2">
-                <p
-                  class="preview-subject ellipsis font-weight-medium text-dark"
-                >
+                <p class="preview-subject ellipsis font-weight-medium text-dark">
                   Travis Jenkins
                 </p>
                 <p class="fw-light small-text mb-0">The meeting is cancelled</p>
@@ -260,68 +193,30 @@
           </div>
         </li>
         <li class="nav-item dropdown d-none d-lg-block user-dropdown">
-          <a
-            class="nav-link"
-            id="UserDropdown"
-            href="#"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img
-              class="img-xs rounded-circle"
-              src="/assets/images/faces/face8.jpg"
-              alt="Profile image"
-            />
+          <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="img-xs rounded-circle" src="/assets/images/faces/face8.jpg" alt="Profile image" />
           </a>
-          <div
-            class="dropdown-menu dropdown-menu-right navbar-dropdown"
-            aria-labelledby="UserDropdown"
-          >
+          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
             <div class="dropdown-header text-center">
-              <img
-                class="img-md rounded-circle"
-                src="/assets/images/faces/face8.jpg"
-                alt="Profile image"
-              />
+              <img class="img-md rounded-circle" src="/assets/images/faces/face8.jpg" alt="Profile image" />
               <p class="mb-1 mt-3 font-weight-semibold">Allen Moreno</p>
               <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
             </div>
-            <a class="dropdown-item"
-              ><i
-                class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"
-              ></i>
-              My Profile <span class="badge badge-pill badge-danger">1</span></a
-            >
-            <a class="dropdown-item"
-              ><i
-                class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"
-              ></i>
-              Messages</a
-            >
-            <a class="dropdown-item"
-              ><i
-                class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"
-              ></i>
-              Activity</a
-            >
-            <a class="dropdown-item"
-              ><i
-                class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"
-              ></i>
-              FAQ</a
-            >
-            <span (click)="logout()" class="dropdown-item"
-              ><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i
-              >Sign Out</span
-            >
+            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i>
+              My Profile <span class="badge badge-pill badge-danger">1</span></a>
+            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i>
+              Messages</a>
+            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i>
+              Activity</a>
+            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i>
+              FAQ</a>
+            <span (click)="logout()" class="dropdown-item"><i
+                class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</span>
           </div>
         </li>
       </ul>
-      <button
-        class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
-        type="button"
-        data-bs-toggle="offcanvas"
-      >
+      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+        data-bs-toggle="offcanvas">
         <span class="mdi mdi-menu"></span>
       </button>
     </div>
@@ -357,49 +252,22 @@
       <i class="settings-close ti-close"></i>
       <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            id="todo-tab"
-            data-bs-toggle="tab"
-            href="#todo-section"
-            role="tab"
-            aria-controls="todo-section"
-            aria-expanded="true"
-            >TO DO LIST</a
-          >
+          <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab"
+            aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            id="chats-tab"
-            data-bs-toggle="tab"
-            href="#chats-section"
-            role="tab"
-            aria-controls="chats-section"
-            >CHATS</a
-          >
+          <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab"
+            aria-controls="chats-section">CHATS</a>
         </li>
       </ul>
       <div class="tab-content" id="setting-content">
-        <div
-          class="tab-pane fade show active scroll-wrapper"
-          id="todo-section"
-          role="tabpanel"
-          aria-labelledby="todo-section"
-        >
+        <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
+          aria-labelledby="todo-section">
           <div class="add-items d-flex px-3 mb-0">
             <form class="form w-100">
               <div class="form-group d-flex">
-                <input
-                  type="text"
-                  class="form-control todo-list-input"
-                  placeholder="Add To-do"
-                />
-                <button
-                  type="submit"
-                  class="add btn btn-primary todo-list-add-btn"
-                  id="add-task"
-                >
+                <input type="text" class="form-control todo-list-input" placeholder="Add To-do" />
+                <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">
                   Add
                 </button>
               </div>
@@ -475,31 +343,17 @@
           </div>
         </div>
         <!-- To do section tab ends -->
-        <div
-          class="tab-pane fade"
-          id="chats-section"
-          role="tabpanel"
-          aria-labelledby="chats-section"
-        >
-          <div
-            class="d-flex align-items-center justify-content-between border-bottom"
-          >
-            <p
-              class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0"
-            >
+        <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+          <div class="d-flex align-items-center justify-content-between border-bottom">
+            <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">
               Friends
             </p>
-            <small
-              class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 fw-normal"
-              >See All</small
-            >
+            <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 fw-normal">See All</small>
           </div>
           <ul class="chat-list">
             <li class="list active">
               <div class="profile">
-                <img src="/assets/images/faces/face1.jpg" alt="image" /><span
-                  class="online"
-                ></span>
+                <img src="/assets/images/faces/face1.jpg" alt="image" /><span class="online"></span>
               </div>
               <div class="info">
                 <p>Thomas Douglas</p>
@@ -509,9 +363,7 @@
             </li>
             <li class="list">
               <div class="profile">
-                <img src="/assets/images/faces/face2.jpg" alt="image" /><span
-                  class="offline"
-                ></span>
+                <img src="/assets/images/faces/face2.jpg" alt="image" /><span class="offline"></span>
               </div>
               <div class="info">
                 <div class="wrapper d-flex">
@@ -524,9 +376,7 @@
             </li>
             <li class="list">
               <div class="profile">
-                <img src="/assets/images/faces/face3.jpg" alt="image" /><span
-                  class="online"
-                ></span>
+                <img src="/assets/images/faces/face3.jpg" alt="image" /><span class="online"></span>
               </div>
               <div class="info">
                 <p>Daniel Russell</p>
@@ -536,9 +386,7 @@
             </li>
             <li class="list">
               <div class="profile">
-                <img src="/assets/images/faces/face4.jpg" alt="image" /><span
-                  class="offline"
-                ></span>
+                <img src="/assets/images/faces/face4.jpg" alt="image" /><span class="offline"></span>
               </div>
               <div class="info">
                 <p>James Richardson</p>
@@ -548,9 +396,7 @@
             </li>
             <li class="list">
               <div class="profile">
-                <img src="/assets/images/faces/face5.jpg" alt="image" /><span
-                  class="online"
-                ></span>
+                <img src="/assets/images/faces/face5.jpg" alt="image" /><span class="online"></span>
               </div>
               <div class="info">
                 <p>Madeline Kennedy</p>
@@ -560,9 +406,7 @@
             </li>
             <li class="list">
               <div class="profile">
-                <img src="/assets/images/faces/face6.jpg" alt="image" /><span
-                  class="online"
-                ></span>
+                <img src="/assets/images/faces/face6.jpg" alt="image" /><span class="online"></span>
               </div>
               <div class="info">
                 <p>Sarah Graves</p>
@@ -582,38 +426,26 @@
         <li class="nav-item" style="cursor: pointer">
           <span class="nav-link">
             <i class="mdi mdi-grid-large menu-icon"></i>
-            <span (click)="onSearchFunctionality(1)" class="menu-title"
-              >Dashboard</span
-            >
+            <span (click)="onSearchFunctionality(1)" class="menu-title">Dashboard</span>
           </span>
         </li>
         <li class="nav-item" style="cursor: pointer">
           <span class="nav-link" style="cursor: pointer;">
             <i class="icon-search"></i>&nbsp; &nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span (click)="onSearchFunctionality(0)" class="menu-title"
-              >Search Offer</span
-            >
+            <span (click)="onSearchFunctionality(0)" class="menu-title">Search Offer</span>
           </span>
         </li>
         <li class="nav-item" style="cursor: pointer">
           <span class="nav-link">
             <i class="fa fa-edit"></i>&nbsp; &nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span (click)="onPostFunctionality(0)" class="menu-title"
-              >Post Offer</span
-            >
+            <span (click)="onPostFunctionality(0)" class="menu-title">Post Offer</span>
           </span>
         </li>
         <li class="nav-item nav-category">UI Elements</li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            data-bs-toggle="collapse"
-            href="#ui-basic"
-            aria-expanded="false"
-            aria-controls="ui-basic"
-          >
+          <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
             <i class="menu-icon mdi mdi-floor-plan"></i>
             <span class="menu-title">UI Elements</span>
             <i class="menu-arrow"></i>
@@ -621,32 +453,21 @@
           <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <a class="nav-link" href="pages/ui-features/buttons.html"
-                  >Buttons</a
-                >
+                <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pages/ui-features/dropdowns.html"
-                  >Dropdowns</a
-                >
+                <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="pages/ui-features/typography.html"
-                  >Typography</a
-                >
+                <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
               </li>
             </ul>
           </div>
         </li>
         <li class="nav-item nav-category">Forms and Datas</li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            data-bs-toggle="collapse"
-            href="#form-elements"
-            aria-expanded="false"
-            aria-controls="form-elements"
-          >
+          <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
+            aria-controls="form-elements">
             <i class="menu-icon mdi mdi-card-text-outline"></i>
             <span class="menu-title">Form elements</span>
             <i class="menu-arrow"></i>
@@ -654,21 +475,13 @@
           <div class="collapse" id="form-elements">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <a class="nav-link" href="pages/forms/basic_elements.html"
-                  >Basic Elements</a
-                >
+                <a class="nav-link" href="pages/forms/basic_elements.html">Basic Elements</a>
               </li>
             </ul>
           </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            data-bs-toggle="collapse"
-            href="#charts"
-            aria-expanded="false"
-            aria-controls="charts"
-          >
+          <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
             <i class="menu-icon mdi mdi-chart-line"></i>
             <span class="menu-title">Charts</span>
             <i class="menu-arrow"></i>
@@ -682,13 +495,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            data-bs-toggle="collapse"
-            href="#tables"
-            aria-expanded="false"
-            aria-controls="tables"
-          >
+          <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
             <i class="menu-icon mdi mdi-table"></i>
             <span class="menu-title">Tables</span>
             <i class="menu-arrow"></i>
@@ -696,21 +503,13 @@
           <div class="collapse" id="tables">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <a class="nav-link" href="pages/tables/basic-table.html"
-                  >Basic table</a
-                >
+                <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a>
               </li>
             </ul>
           </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            data-bs-toggle="collapse"
-            href="#icons"
-            aria-expanded="false"
-            aria-controls="icons"
-          >
+          <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
             <i class="menu-icon mdi mdi-layers-outline"></i>
             <span class="menu-title">Icons</span>
             <i class="menu-arrow"></i>
@@ -725,13 +524,7 @@
         </li>
         <li class="nav-item nav-category">pages</li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            data-bs-toggle="collapse"
-            href="#auth"
-            aria-expanded="false"
-            aria-controls="auth"
-          >
+          <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
             <i class="menu-icon mdi mdi-account-circle-outline"></i>
             <span class="menu-title">User Pages</span>
             <i class="menu-arrow"></i>
@@ -746,10 +539,7 @@
         </li>
         <li class="nav-item nav-category">help</li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html"
-          >
+          <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
             <i class="menu-icon mdi mdi-file-document"></i>
             <span class="menu-title">Documentation</span>
           </a>
@@ -762,82 +552,38 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="home-tab">
-              <div
-                class="d-sm-flex align-items-center justify-content-between border-bottom"
-              >
+              <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                 <ul class="nav nav-tabs" role="tablist">
                   <li class="nav-item">
-                    <a
-                      class="nav-link active ps-0"
-                      id="home-tab"
-                      data-bs-toggle="tab"
-                      href="#overview"
-                      role="tab"
-                      aria-controls="overview"
-                      aria-selected="true"
-                      >Overview</a
-                    >
+                    <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab"
+                      aria-controls="overview" aria-selected="true">Overview</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      id="profile-tab"
-                      data-bs-toggle="tab"
-                      href="#audiences"
-                      role="tab"
-                      aria-selected="false"
-                      >Audiences</a
-                    >
+                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab"
+                      aria-selected="false">Audiences</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      id="contact-tab"
-                      data-bs-toggle="tab"
-                      href="#demographics"
-                      role="tab"
-                      aria-selected="false"
-                      >Demographics</a
-                    >
+                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
+                      aria-selected="false">Demographics</a>
                   </li>
                   <li class="nav-item">
-                    <a
-                      class="nav-link border-0"
-                      id="more-tab"
-                      data-bs-toggle="tab"
-                      href="#more"
-                      role="tab"
-                      aria-selected="false"
-                      >More</a
-                    >
+                    <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="#more" role="tab"
+                      aria-selected="false">More</a>
                   </li>
                 </ul>
                 <div>
                   <div class="btn-wrapper">
-                    <a href="#" class="btn btn-otline-dark align-items-center"
-                      ><i class="icon-share"></i> Share</a
-                    >
-                    <a href="#" class="btn btn-otline-dark"
-                      ><i class="icon-printer"></i> Print</a
-                    >
-                    <a href="#" class="btn btn-primary text-white me-0"
-                      ><i class="icon-download"></i> Export</a
-                    >
+                    <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+                    <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                    <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
                   </div>
                 </div>
               </div>
               <div class="tab-content tab-content-basic">
-                <div
-                  class="tab-pane fade show active"
-                  id="overview"
-                  role="tabpanel"
-                  aria-labelledby="overview"
-                >
+                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
                   <div class="row">
                     <div class="col-sm-12">
-                      <div
-                        class="statistics-details d-flex align-items-center justify-content-between"
-                      >
+                      <div class="statistics-details d-flex align-items-center justify-content-between">
                         <div>
                           <p class="statistics-title">Bounce Rate</p>
                           <h3 class="rate-percentage">32.53%</h3>
@@ -1003,9 +749,7 @@
                                   <span class="fw-bold">Campaign</span> for
                                   better outreach
                                 </h3>
-                                <a href="#" class="btn btn-info upgrade-btn"
-                                  >Upgrade Account!</a
-                                >
+                                <a href="#" class="btn btn-info upgrade-btn">Upgrade Account!</a>
                               </div>
                             </div>
                           </div>
@@ -1015,9 +759,7 @@
                         <div class="col-12 grid-margin stretch-card">
                           <div class="card card-rounded">
                             <div class="card-body">
-                              <div
-                                class="d-sm-flex justify-content-between align-items-start"
-                              >
+                              <div class="d-sm-flex justify-content-between align-items-start">
                                 <div>
                                   <h4 class="card-title card-title-dash">
                                     Pending Requests
@@ -1027,10 +769,7 @@
                                   </p>
                                 </div>
                                 <div>
-                                  <button
-                                    class="btn btn-primary btn-lg text-white mb-0 me-0"
-                                    type="button"
-                                  >
+                                  <button class="btn btn-primary btn-lg text-white mb-0 me-0" type="button">
                                     <i class="mdi mdi-account-plus"></i>Add new
                                     member
                                   </button>
@@ -1041,17 +780,10 @@
                                   <thead>
                                     <tr>
                                       <th>
-                                        <div
-                                          class="form-check form-check-flat mt-0"
-                                        >
+                                        <div class="form-check form-check-flat mt-0">
                                           <label class="form-check-label">
-                                            <input
-                                              type="checkbox"
-                                              class="form-check-input"
-                                              aria-checked="false" /><i
-                                              class="input-helper"
-                                            ></i
-                                          ></label>
+                                            <input type="checkbox" class="form-check-input" aria-checked="false" /><i
+                                              class="input-helper"></i></label>
                                         </div>
                                       </th>
                                       <th>Customer</th>
@@ -1063,25 +795,15 @@
                                   <tbody>
                                     <tr>
                                       <td>
-                                        <div
-                                          class="form-check form-check-flat mt-0"
-                                        >
+                                        <div class="form-check form-check-flat mt-0">
                                           <label class="form-check-label">
-                                            <input
-                                              type="checkbox"
-                                              class="form-check-input"
-                                              aria-checked="false" /><i
-                                              class="input-helper"
-                                            ></i
-                                          ></label>
+                                            <input type="checkbox" class="form-check-input" aria-checked="false" /><i
+                                              class="input-helper"></i></label>
                                         </div>
                                       </td>
                                       <td>
                                         <div class="d-flex">
-                                          <img
-                                            src="/assets/images/faces/face1.jpg"
-                                            alt=""
-                                          />
+                                          <img src="/assets/images/faces/face1.jpg" alt="" />
                                           <div>
                                             <h6>Brandon Washington</h6>
                                             <p>Head admin</p>
@@ -1095,52 +817,33 @@
                                       <td>
                                         <div>
                                           <div
-                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap"
-                                          >
+                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
                                             <p class="text-success">79%</p>
                                             <p>85/162</p>
                                           </div>
                                           <div class="progress progress-md">
-                                            <div
-                                              class="progress-bar bg-success"
-                                              role="progressbar"
-                                              style="width: 85%"
-                                              aria-valuenow="25"
-                                              aria-valuemin="0"
-                                              aria-valuemax="100"
-                                            ></div>
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%"
+                                              aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                           </div>
                                         </div>
                                       </td>
                                       <td>
-                                        <div
-                                          class="badge badge-opacity-warning"
-                                        >
+                                        <div class="badge badge-opacity-warning">
                                           In progress
                                         </div>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>
-                                        <div
-                                          class="form-check form-check-flat mt-0"
-                                        >
+                                        <div class="form-check form-check-flat mt-0">
                                           <label class="form-check-label">
-                                            <input
-                                              type="checkbox"
-                                              class="form-check-input"
-                                              aria-checked="false" /><i
-                                              class="input-helper"
-                                            ></i
-                                          ></label>
+                                            <input type="checkbox" class="form-check-input" aria-checked="false" /><i
+                                              class="input-helper"></i></label>
                                         </div>
                                       </td>
                                       <td>
                                         <div class="d-flex">
-                                          <img
-                                            src="/assets/images/faces/face2.jpg"
-                                            alt=""
-                                          />
+                                          <img src="/assets/images/faces/face2.jpg" alt="" />
                                           <div>
                                             <h6>Laura Brooks</h6>
                                             <p>Head admin</p>
@@ -1154,52 +857,33 @@
                                       <td>
                                         <div>
                                           <div
-                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap"
-                                          >
+                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
                                             <p class="text-success">65%</p>
                                             <p>85/162</p>
                                           </div>
                                           <div class="progress progress-md">
-                                            <div
-                                              class="progress-bar bg-success"
-                                              role="progressbar"
-                                              style="width: 65%"
-                                              aria-valuenow="65"
-                                              aria-valuemin="0"
-                                              aria-valuemax="100"
-                                            ></div>
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%"
+                                              aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                                           </div>
                                         </div>
                                       </td>
                                       <td>
-                                        <div
-                                          class="badge badge-opacity-warning"
-                                        >
+                                        <div class="badge badge-opacity-warning">
                                           In progress
                                         </div>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>
-                                        <div
-                                          class="form-check form-check-flat mt-0"
-                                        >
+                                        <div class="form-check form-check-flat mt-0">
                                           <label class="form-check-label">
-                                            <input
-                                              type="checkbox"
-                                              class="form-check-input"
-                                              aria-checked="false" /><i
-                                              class="input-helper"
-                                            ></i
-                                          ></label>
+                                            <input type="checkbox" class="form-check-input" aria-checked="false" /><i
+                                              class="input-helper"></i></label>
                                         </div>
                                       </td>
                                       <td>
                                         <div class="d-flex">
-                                          <img
-                                            src="/assets/images/faces/face3.jpg"
-                                            alt=""
-                                          />
+                                          <img src="/assets/images/faces/face3.jpg" alt="" />
                                           <div>
                                             <h6>Wayne Murphy</h6>
                                             <p>Head admin</p>
@@ -1213,52 +897,33 @@
                                       <td>
                                         <div>
                                           <div
-                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap"
-                                          >
+                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
                                             <p class="text-success">65%</p>
                                             <p>85/162</p>
                                           </div>
                                           <div class="progress progress-md">
-                                            <div
-                                              class="progress-bar bg-warning"
-                                              role="progressbar"
-                                              style="width: 38%"
-                                              aria-valuenow="38"
-                                              aria-valuemin="0"
-                                              aria-valuemax="100"
-                                            ></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 38%"
+                                              aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
                                           </div>
                                         </div>
                                       </td>
                                       <td>
-                                        <div
-                                          class="badge badge-opacity-warning"
-                                        >
+                                        <div class="badge badge-opacity-warning">
                                           In progress
                                         </div>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td>
-                                        <div
-                                          class="form-check form-check-flat mt-0"
-                                        >
+                                        <div class="form-check form-check-flat mt-0">
                                           <label class="form-check-label">
-                                            <input
-                                              type="checkbox"
-                                              class="form-check-input"
-                                              aria-checked="false" /><i
-                                              class="input-helper"
-                                            ></i
-                                          ></label>
+                                            <input type="checkbox" class="form-check-input" aria-checked="false" /><i
+                                              class="input-helper"></i></label>
                                         </div>
                                       </td>
                                       <td>
                                         <div class="d-flex">
-                                          <img
-                                            src="/assets/images/faces/face4.jpg"
-                                            alt=""
-                                          />
+                                          <img src="/assets/images/faces/face4.jpg" alt="" />
                                           <div>
                                             <h6>Matthew Bailey</h6>
                                             <p>Head admin</p>
@@ -1272,20 +937,13 @@
                                       <td>
                                         <div>
                                           <div
-                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap"
-                                          >
+                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
                                             <p class="text-success">65%</p>
                                             <p>85/162</p>
                                           </div>
                                           <div class="progress progress-md">
-                                            <div
-                                              class="progress-bar bg-danger"
-                                              role="progressbar"
-                                              style="width: 15%"
-                                              aria-valuenow="15"
-                                              aria-valuemin="0"
-                                              aria-valuemax="100"
-                                            ></div>
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%"
+                                              aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
                                           </div>
                                         </div>
                                       </td>
@@ -1297,25 +955,15 @@
                                     </tr>
                                     <tr>
                                       <td>
-                                        <div
-                                          class="form-check form-check-flat mt-0"
-                                        >
+                                        <div class="form-check form-check-flat mt-0">
                                           <label class="form-check-label">
-                                            <input
-                                              type="checkbox"
-                                              class="form-check-input"
-                                              aria-checked="false" /><i
-                                              class="input-helper"
-                                            ></i
-                                          ></label>
+                                            <input type="checkbox" class="form-check-input" aria-checked="false" /><i
+                                              class="input-helper"></i></label>
                                         </div>
                                       </td>
                                       <td>
                                         <div class="d-flex">
-                                          <img
-                                            src="/assets/images/faces/face5.jpg"
-                                            alt=""
-                                          />
+                                          <img src="/assets/images/faces/face5.jpg" alt="" />
                                           <div>
                                             <h6>Katherine Butler</h6>
                                             <p>Head admin</p>
@@ -1329,27 +977,18 @@
                                       <td>
                                         <div>
                                           <div
-                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap"
-                                          >
+                                            class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
                                             <p class="text-success">65%</p>
                                             <p>85/162</p>
                                           </div>
                                           <div class="progress progress-md">
-                                            <div
-                                              class="progress-bar bg-success"
-                                              role="progressbar"
-                                              style="width: 65%"
-                                              aria-valuenow="65"
-                                              aria-valuemin="0"
-                                              aria-valuemax="100"
-                                            ></div>
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 65%"
+                                              aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                                           </div>
                                         </div>
                                       </td>
                                       <td>
-                                        <div
-                                          class="badge badge-opacity-success"
-                                        >
+                                        <div class="badge badge-opacity-success">
                                           Completed
                                         </div>
                                       </td>
@@ -1368,20 +1007,14 @@
                               <h4 class="card-title card-title-dash">
                                 Recent Events
                               </h4>
-                              <div
-                                class="list align-items-center border-bottom py-2"
-                              >
+                              <div class="list align-items-center border-bottom py-2">
                                 <div class="wrapper w-100">
                                   <p class="mb-2 font-weight-medium">
                                     Change in Directors
                                   </p>
-                                  <div
-                                    class="d-flex justify-content-between align-items-center"
-                                  >
+                                  <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                      <i
-                                        class="mdi mdi-calendar text-muted me-1"
-                                      ></i>
+                                      <i class="mdi mdi-calendar text-muted me-1"></i>
                                       <p class="mb-0 text-small text-muted">
                                         Mar 14, 2019
                                       </p>
@@ -1389,20 +1022,14 @@
                                   </div>
                                 </div>
                               </div>
-                              <div
-                                class="list align-items-center border-bottom py-2"
-                              >
+                              <div class="list align-items-center border-bottom py-2">
                                 <div class="wrapper w-100">
                                   <p class="mb-2 font-weight-medium">
                                     Other Events
                                   </p>
-                                  <div
-                                    class="d-flex justify-content-between align-items-center"
-                                  >
+                                  <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                      <i
-                                        class="mdi mdi-calendar text-muted me-1"
-                                      ></i>
+                                      <i class="mdi mdi-calendar text-muted me-1"></i>
                                       <p class="mb-0 text-small text-muted">
                                         Mar 14, 2019
                                       </p>
@@ -1410,20 +1037,14 @@
                                   </div>
                                 </div>
                               </div>
-                              <div
-                                class="list align-items-center border-bottom py-2"
-                              >
+                              <div class="list align-items-center border-bottom py-2">
                                 <div class="wrapper w-100">
                                   <p class="mb-2 font-weight-medium">
                                     Quarterly Report
                                   </p>
-                                  <div
-                                    class="d-flex justify-content-between align-items-center"
-                                  >
+                                  <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                      <i
-                                        class="mdi mdi-calendar text-muted me-1"
-                                      ></i>
+                                      <i class="mdi mdi-calendar text-muted me-1"></i>
                                       <p class="mb-0 text-small text-muted">
                                         Mar 14, 2019
                                       </p>
@@ -1431,20 +1052,14 @@
                                   </div>
                                 </div>
                               </div>
-                              <div
-                                class="list align-items-center border-bottom py-2"
-                              >
+                              <div class="list align-items-center border-bottom py-2">
                                 <div class="wrapper w-100">
                                   <p class="mb-2 font-weight-medium">
                                     Change in Directors
                                   </p>
-                                  <div
-                                    class="d-flex justify-content-between align-items-center"
-                                  >
+                                  <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-flex align-items-center">
-                                      <i
-                                        class="mdi mdi-calendar text-muted me-1"
-                                      ></i>
+                                      <i class="mdi mdi-calendar text-muted me-1"></i>
                                       <p class="mb-0 text-small text-muted">
                                         Mar 14, 2019
                                       </p>
@@ -1456,10 +1071,8 @@
                               <div class="list align-items-center pt-3">
                                 <div class="wrapper w-100">
                                   <p class="mb-0">
-                                    <a href="#" class="fw-bold text-primary"
-                                      >Show all
-                                      <i class="mdi mdi-arrow-right ms-2"></i
-                                    ></a>
+                                    <a href="#" class="fw-bold text-primary">Show all
+                                      <i class="mdi mdi-arrow-right ms-2"></i></a>
                                   </p>
                                 </div>
                               </div>
@@ -1469,9 +1082,7 @@
                         <div class="col-md-6 col-lg-6 grid-margin stretch-card">
                           <div class="card card-rounded">
                             <div class="card-body">
-                              <div
-                                class="d-flex align-items-center justify-content-between mb-3"
-                              >
+                              <div class="d-flex align-items-center justify-content-between mb-3">
                                 <h4 class="card-title card-title-dash">
                                   Activities
                                 </h4>
@@ -1481,9 +1092,7 @@
                                 <li>
                                   <div class="d-flex justify-content-between">
                                     <div>
-                                      <span class="text-light-green"
-                                        >Ben Tossell</span
-                                      >
+                                      <span class="text-light-green">Ben Tossell</span>
                                       assign you a task
                                     </div>
                                     <p>Just now</p>
@@ -1492,9 +1101,7 @@
                                 <li>
                                   <div class="d-flex justify-content-between">
                                     <div>
-                                      <span class="text-light-green"
-                                        >Oliver Noah</span
-                                      >
+                                      <span class="text-light-green">Oliver Noah</span>
                                       assign you a task
                                     </div>
                                     <p>1h</p>
@@ -1503,9 +1110,7 @@
                                 <li>
                                   <div class="d-flex justify-content-between">
                                     <div>
-                                      <span class="text-light-green"
-                                        >Jack William</span
-                                      >
+                                      <span class="text-light-green">Jack William</span>
                                       assign you a task
                                     </div>
                                     <p>1h</p>
@@ -1514,9 +1119,7 @@
                                 <li>
                                   <div class="d-flex justify-content-between">
                                     <div>
-                                      <span class="text-light-green"
-                                        >Leo Lucas</span
-                                      >
+                                      <span class="text-light-green">Leo Lucas</span>
                                       assign you a task
                                     </div>
                                     <p>1h</p>
@@ -1525,9 +1128,7 @@
                                 <li>
                                   <div class="d-flex justify-content-between">
                                     <div>
-                                      <span class="text-light-green"
-                                        >Thomas Henry</span
-                                      >
+                                      <span class="text-light-green">Thomas Henry</span>
                                       assign you a task
                                     </div>
                                     <p>1h</p>
@@ -1536,9 +1137,7 @@
                                 <li>
                                   <div class="d-flex justify-content-between">
                                     <div>
-                                      <span class="text-light-green"
-                                        >Ben Tossell</span
-                                      >
+                                      <span class="text-light-green">Ben Tossell</span>
                                       assign you a task
                                     </div>
                                     <p>1h</p>
@@ -1547,9 +1146,7 @@
                                 <li>
                                   <div class="d-flex justify-content-between">
                                     <div>
-                                      <span class="text-light-green"
-                                        >Ben Tossell</span
-                                      >
+                                      <span class="text-light-green">Ben Tossell</span>
                                       assign you a task
                                     </div>
                                     <p>1h</p>
@@ -1559,10 +1156,8 @@
                               <div class="list align-items-center pt-3">
                                 <div class="wrapper w-100">
                                   <p class="mb-0">
-                                    <a href="#" class="fw-bold text-primary"
-                                      >Show all
-                                      <i class="mdi mdi-arrow-right ms-2"></i
-                                    ></a>
+                                    <a href="#" class="fw-bold text-primary">Show all
+                                      <i class="mdi mdi-arrow-right ms-2"></i></a>
                                   </p>
                                 </div>
                               </div>
@@ -1578,17 +1173,14 @@
                             <div class="card-body">
                               <div class="row">
                                 <div class="col-lg-12">
-                                  <div
-                                    class="d-flex justify-content-between align-items-center"
-                                  >
+                                  <div class="d-flex justify-content-between align-items-center">
                                     <h4 class="card-title card-title-dash">
                                       Todo list
                                     </h4>
                                     <div class="add-items d-flex mb-0">
                                       <!-- <input type="text" class="form-control todo-list-input" placeholder="What do you need to do today?"> -->
                                       <button
-                                        class="add btn btn-icons btn-rounded btn-primary todo-list-add-btn text-white me-0 pl-12p"
-                                      >
+                                        class="add btn btn-icons btn-rounded btn-primary todo-list-add-btn text-white me-0 pl-12p">
                                         <i class="mdi mdi-plus"></i>
                                       </button>
                                     </div>
@@ -1598,10 +1190,7 @@
                                       <li class="d-block">
                                         <div class="form-check w-100">
                                           <label class="form-check-label">
-                                            <input
-                                              class="checkbox"
-                                              type="checkbox"
-                                            />
+                                            <input class="checkbox" type="checkbox" />
                                             Lorem Ipsum is simply dummy text of
                                             the printing
                                             <i class="input-helper rounded"></i>
@@ -1610,24 +1199,17 @@
                                             <div class="ps-4 text-small me-3">
                                               24 June 2020
                                             </div>
-                                            <div
-                                              class="badge badge-opacity-warning me-3"
-                                            >
+                                            <div class="badge badge-opacity-warning me-3">
                                               Due tomorrow
                                             </div>
-                                            <i
-                                              class="mdi mdi-flag ms-2 flag-color"
-                                            ></i>
+                                            <i class="mdi mdi-flag ms-2 flag-color"></i>
                                           </div>
                                         </div>
                                       </li>
                                       <li class="d-block">
                                         <div class="form-check w-100">
                                           <label class="form-check-label">
-                                            <input
-                                              class="checkbox"
-                                              type="checkbox"
-                                            />
+                                            <input class="checkbox" type="checkbox" />
                                             Lorem Ipsum is simply dummy text of
                                             the printing
                                             <i class="input-helper rounded"></i>
@@ -1636,9 +1218,7 @@
                                             <div class="ps-4 text-small me-3">
                                               23 June 2020
                                             </div>
-                                            <div
-                                              class="badge badge-opacity-success me-3"
-                                            >
+                                            <div class="badge badge-opacity-success me-3">
                                               Done
                                             </div>
                                           </div>
@@ -1647,10 +1227,7 @@
                                       <li>
                                         <div class="form-check w-100">
                                           <label class="form-check-label">
-                                            <input
-                                              class="checkbox"
-                                              type="checkbox"
-                                            />
+                                            <input class="checkbox" type="checkbox" />
                                             Lorem Ipsum is simply dummy text of
                                             the printing
                                             <i class="input-helper rounded"></i>
@@ -1659,9 +1236,7 @@
                                             <div class="ps-4 text-small me-3">
                                               24 June 2020
                                             </div>
-                                            <div
-                                              class="badge badge-opacity-success me-3"
-                                            >
+                                            <div class="badge badge-opacity-success me-3">
                                               Done
                                             </div>
                                           </div>
@@ -1670,10 +1245,7 @@
                                       <li class="border-bottom-0">
                                         <div class="form-check w-100">
                                           <label class="form-check-label">
-                                            <input
-                                              class="checkbox"
-                                              type="checkbox"
-                                            />
+                                            <input class="checkbox" type="checkbox" />
                                             Lorem Ipsum is simply dummy text of
                                             the printing
                                             <i class="input-helper rounded"></i>
@@ -1682,9 +1254,7 @@
                                             <div class="ps-4 text-small me-3">
                                               24 June 2020
                                             </div>
-                                            <div
-                                              class="badge badge-opacity-danger me-3"
-                                            >
+                                            <div class="badge badge-opacity-danger me-3">
                                               Expired
                                             </div>
                                           </div>
@@ -1708,9 +1278,7 @@
                             <div class="card-body">
                               <div class="row">
                                 <div class="col-lg-12">
-                                  <div
-                                    class="d-flex justify-content-between align-items-center mb-3"
-                                  >
+                                  <div class="d-flex justify-content-between align-items-center mb-3">
                                     <div>
                                       <h4 class="card-title card-title-dash">
                                         Top Performer
@@ -1719,21 +1287,15 @@
                                   </div>
                                   <div class="mt-3">
                                     <div
-                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom"
-                                    >
+                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                       <div class="d-flex">
-                                        <img
-                                          class="img-sm rounded-10"
-                                          src="/assets/images/faces/face1.jpg"
-                                          alt="profile"
-                                        />
+                                        <img class="img-sm rounded-10" src="/assets/images/faces/face1.jpg"
+                                          alt="profile" />
                                         <div class="wrapper ms-3">
                                           <p class="ms-1 mb-1 fw-bold">
                                             Brandon Washington
                                           </p>
-                                          <small class="text-muted mb-0"
-                                            >162543</small
-                                          >
+                                          <small class="text-muted mb-0">162543</small>
                                         </div>
                                       </div>
                                       <div class="text-muted text-small">
@@ -1741,21 +1303,15 @@
                                       </div>
                                     </div>
                                     <div
-                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom"
-                                    >
+                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                       <div class="d-flex">
-                                        <img
-                                          class="img-sm rounded-10"
-                                          src="/assets/images/faces/face2.jpg"
-                                          alt="profile"
-                                        />
+                                        <img class="img-sm rounded-10" src="/assets/images/faces/face2.jpg"
+                                          alt="profile" />
                                         <div class="wrapper ms-3">
                                           <p class="ms-1 mb-1 fw-bold">
                                             Wayne Murphy
                                           </p>
-                                          <small class="text-muted mb-0"
-                                            >162543</small
-                                          >
+                                          <small class="text-muted mb-0">162543</small>
                                         </div>
                                       </div>
                                       <div class="text-muted text-small">
@@ -1763,21 +1319,15 @@
                                       </div>
                                     </div>
                                     <div
-                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom"
-                                    >
+                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                       <div class="d-flex">
-                                        <img
-                                          class="img-sm rounded-10"
-                                          src="/assets/images/faces/face3.jpg"
-                                          alt="profile"
-                                        />
+                                        <img class="img-sm rounded-10" src="/assets/images/faces/face3.jpg"
+                                          alt="profile" />
                                         <div class="wrapper ms-3">
                                           <p class="ms-1 mb-1 fw-bold">
                                             Katherine Butler
                                           </p>
-                                          <small class="text-muted mb-0"
-                                            >162543</small
-                                          >
+                                          <small class="text-muted mb-0">162543</small>
                                         </div>
                                       </div>
                                       <div class="text-muted text-small">
@@ -1785,43 +1335,30 @@
                                       </div>
                                     </div>
                                     <div
-                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom"
-                                    >
+                                      class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
                                       <div class="d-flex">
-                                        <img
-                                          class="img-sm rounded-10"
-                                          src="/assets/images/faces/face4.jpg"
-                                          alt="profile"
-                                        />
+                                        <img class="img-sm rounded-10" src="/assets/images/faces/face4.jpg"
+                                          alt="profile" />
                                         <div class="wrapper ms-3">
                                           <p class="ms-1 mb-1 fw-bold">
                                             Matthew Bailey
                                           </p>
-                                          <small class="text-muted mb-0"
-                                            >162543</small
-                                          >
+                                          <small class="text-muted mb-0">162543</small>
                                         </div>
                                       </div>
                                       <div class="text-muted text-small">
                                         1h ago
                                       </div>
                                     </div>
-                                    <div
-                                      class="wrapper d-flex align-items-center justify-content-between pt-2"
-                                    >
+                                    <div class="wrapper d-flex align-items-center justify-content-between pt-2">
                                       <div class="d-flex">
-                                        <img
-                                          class="img-sm rounded-10"
-                                          src="/assets/images/faces/face5.jpg"
-                                          alt="profile"
-                                        />
+                                        <img class="img-sm rounded-10" src="/assets/images/faces/face5.jpg"
+                                          alt="profile" />
                                         <div class="wrapper ms-3">
                                           <p class="ms-1 mb-1 fw-bold">
                                             Rafell John
                                           </p>
-                                          <small class="text-muted mb-0"
-                                            >Alaska, USA</small
-                                          >
+                                          <small class="text-muted mb-0">Alaska, USA</small>
                                         </div>
                                       </div>
                                       <div class="text-muted text-small">
@@ -1846,50 +1383,30 @@
       <!-- content-wrapper ends -->
       <!-- partial:partials/_footer.html -->
       <footer class="footer">
-        <div
-          class="d-sm-flex justify-content-center justify-content-sm-between"
-        >
-          <span
-            class="text-muted text-center text-sm-left d-block d-sm-inline-block"
-            >Premium
-            <a href="https://www.bootstrapdash.com/" target="_blank"
-              >Bootstrap admin template</a
-            >
-            from BootstrapDash.</span
-          >
-          <span
-            class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"
-            >Copyright © 2021. All rights reserved.</span
-          >
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium
+            <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a>
+            from BootstrapDash.</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights
+            reserved.</span>
         </div>
       </footer>
       <!-- partial -->
     </div>
     <div class="search-functionality mt-5" *ngIf="searchfunc">
-      <form action="" [formGroup]="searchForm">
+      <form [formGroup]="searchForm">
         <h1 class="heading">Search Offer</h1>
         <div class="searchform">
           <label for="">Enter Your PAN Number</label>
-          <input
-            formControlName="PanNumber"
-            type="text"
-            name=""
-            id=""
-            placeholder="Enter your PAN Number"
-            required
-            maxlength="10"
-          />
+          <input formControlName="PanNumber" type="text" name="" id="" placeholder="Enter your PAN Number" required
+            maxlength="10" />
         </div>
         <div class="button">
           <button [disabled]="PANVALID" (click)="checkPan()" type="submit">Search</button>
         </div>
       </form>
       <div class="table">
-        <table
-          style="margin-left: 71px; margin-top: 50px"
-          class="table table-hover"
-          *ngIf="tableshow"
-        >
+        <table style="margin-left: 71px; margin-top: 50px" class="table table-hover" *ngIf="tableshow">
           <thead>
             <tr>
               <th scope="col">Name</th>
@@ -1920,50 +1437,57 @@
     </div>
     <div class="post-functionality" *ngIf="postfunc">
       <form [formGroup]="postForm">
-      <div class="heading mt-5">
-        <h1 style="margin-left: 463px;" class="sub-heading">Post your Offer</h1>
-      </div>
-      <div class="form-box" style="margin-left: 229px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="mt-2">
-                <label for="exampleInputEmail1" class="form-label">Name</label>
-                <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mt-2">
-                <label for="exampleInputEmail1" class="form-label">Offer Received Date</label>
-                <input formControlName="offerReceivedDate" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mt-2">
-                <label for="exampleInputEmail1" class="form-label">Job Title</label>
-                <input formControlName="jobTitle" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mt-2">
-                <label for="exampleInputEmail1" class="form-label">Pan Number</label>
-                <input formControlName="panNumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="mt-2">
-                <label for="exampleInputEmail1" class="form-label">Company</label>
-                <input formControlName="company" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mt-2">
-                <label for="exampleInputEmail1" class="form-label">Job Joined Date</label>
-                <input formControlName="joiningDate" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-              <div class="mt-2">
-                <label for="exampleInputEmail1" class="form-label">CTC</label>
-                <input type="text" formControlName="ctc" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              </div>
-            </div>
-            <button (click)="createOffer()" class=" mt-2 btn btn-primary" type="submit">Submit</button>
-          </div>
+        <div class="heading mt-5">
+          <h1 style="margin-left: 463px;" class="sub-heading">Post your Offer</h1>
         </div>
-        
-      </div>
-    </form>
+        <div class="form-box" style="margin-left: 229px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mt-2">
+                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                </div>
+                <div class="mt-2">
+                  <label for="exampleInputEmail1" class="form-label">Offer Received Date</label>
+                  <input formControlName="offerReceivedDate" type="date" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                </div>
+                <div class="mt-2">
+                  <label for="exampleInputEmail1" class="form-label">Job Title</label>
+                  <input formControlName="jobTitle" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                </div>
+                <div class="mt-2">
+                  <label for="exampleInputEmail1" class="form-label">Pan Number</label>
+                  <input formControlName="panNumber" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mt-2">
+                  <label for="exampleInputEmail1" class="form-label">Company</label>
+                  <input formControlName="company" type="text" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                </div>
+                <div class="mt-2">
+                  <label for="exampleInputEmail1" class="form-label">Job Joined Date</label>
+                  <input formControlName="joiningDate" type="date" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                </div>
+                <div class="mt-2">
+                  <label for="exampleInputEmail1" class="form-label">CTC</label>
+                  <input type="text" formControlName="ctc" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                </div>
+              </div>
+              <button (click)="createOffer()" class=" mt-2 btn btn-primary" type="submit">Submit</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
     </div>
   </div>
   <!-- page-body-wrapper ends -->

@@ -21,6 +21,7 @@ import { AuthInterceptor } from './_auth/auth.interceptor';
 import { AuthGuard } from './_auth/auth.guard.service';
 import { UserService } from './_services/user.service';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { MainDashboardComponent } from './Main/main-dashboard/main-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     DashboardPopupComponent,
     PricingComponent,
     DeveloperComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    MainDashboardComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { UserAuthService } from './user-auth.service';
 })
 export class UserService {
 
-  requestHeader = new HttpHeaders({ 'Content-type': 'application/json' });
+  requestHeader = new HttpHeaders({ 'Content-type': 'application/json', 'No-Auth': 'True' });
   constructor(
     private httpclient: HttpClient,
     private userAuthService: UserAuthService
@@ -20,15 +20,14 @@ export class UserService {
     });
   }
 
-  public forEmployer(employerData: any) {
-    return this.httpclient.post(environment.API_URL + '/register/employer', employerData, {
-      headers: this.requestHeader,
-    });
-  }
-
-
-  public forEmployee(employeeData: any) {
-    return this.httpclient.post(environment.API_URL + '/register/employee', employeeData, {
+  public register(data: any, role: string) {
+    let path = '';
+    if(role === `"Employeer"`){
+      path = '/register/employer'
+    } else if(role === `"Employee"`) {
+      path = '/register/employee'
+    }
+    return this.httpclient.post(environment.API_URL + path, data, {
       headers: this.requestHeader,
     });
   }
@@ -36,11 +35,11 @@ export class UserService {
   public roleMatch(allowedRoles: any[]): any {
     let isMatch = false;
     const userRoles: any = this.userAuthService.getRoles();
-
+    console.info(userRoles, "userRoles")
     if (userRoles != null && userRoles) {
       for (let i = 0; i < userRoles.length; i++) {
         for (let j = 0; j < allowedRoles.length; j++) {
-          if (userRoles[i].roleName === allowedRoles[j]) {
+          if (userRoles[i] === allowedRoles[j]) {
             isMatch = true;
             return isMatch;
           } else {

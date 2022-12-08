@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog,MatDialogRef } from "@angular/material/dialog";
-import { DashboardPopupComponent } from 'src/app/dialog-modal/dashboard-popup/dashboard-popup.component';
+import { DashboardPopupComponent } from '../../dialog-modal/dashboard-popup/dashboard-popup.component';
 import { UserAuthService } from '../../_services/user-auth.service';
 import { UserService } from '../../_services/user.service';
 @Component({
@@ -27,6 +27,11 @@ export class DashboardComponent implements OnInit {
   public logout() {
     this.userAuthService.clear();
     this.router.navigate(['/']);
+  }
+
+  navigateByRole(role: string) {
+    localStorage.setItem("role",JSON.stringify(role))
+    this.router.navigateByUrl("/register")
   }
 
 }
