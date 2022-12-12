@@ -5,13 +5,13 @@
     "loglevel": "debug",
     "changeOrigin": true
   },
-  "/api": {
-    "target": "http://www.safehiring-env.eba-n9mnmkmw.ap-south-1.elasticbeanstalk.com/v1/",
+  "/api-proxy": {
+    "target": "http://localhost:8080/v1/api",
     "secure": true,
     "loglevel": "debug",
     "changeOrigin": true,
     "pathRewrite": {
-      "^/api": ""
+      "^/api-proxy": ""
     }
   }
 }

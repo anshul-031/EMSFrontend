@@ -10,7 +10,7 @@ export class JobOfferService {
   constructor(private httpclient: HttpClient,) { }
 
   public createJobOffers(jobOfferData: any) {
-    return this.httpclient.post(environment.API_URL + '/employer/employmentoffer', jobOfferData, {
+    return this.httpclient.post('/api-proxy/employer/employmentoffer', jobOfferData, {
       headers: this.requestHeader,
     });
   }
