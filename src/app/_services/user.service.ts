@@ -27,6 +27,9 @@ export class UserService {
     } else if(role === `"Employee"`) {
       path = '/register/employee'
     }
+    if(!role){
+      path = '/register/employer'
+    }
     return this.httpclient.post(environment.API_URL + path, data, {
       headers: this.requestHeader,
     });

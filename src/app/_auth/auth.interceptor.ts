@@ -36,6 +36,8 @@ intercept(
                   this.router.navigate(['/login']);
               } else if(err.status === 403) {
                   this.router.navigate(['/forbidden']);
+              } else if (err.status === 400) {
+                 return next.handle(req.clone())
               }
               return throwError("Some thing is wrong");
           }

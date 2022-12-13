@@ -12,6 +12,75 @@
     </button>
   </app-page-header>
 
-  <div style="padding: 0 20px">
-    Hello from Dashboard
+  <div style="padding: 20px">
+    <form [formGroup]="searchFormGroup" (ngSubmit)="searchOffer()">
+    <div class="row justify-content-md-center">
+      
+       <div class="col-md-5 col-md-auto">
+        <mat-form-field class="full-width" >
+          <mat-label>Enter Employee's PAN Number</mat-label>
+          <input matInput oninput="this.value = this.value.toUpperCase()"  formControlName="tin" placeholder="Enter Employee's PAN Number">
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-error *ngIf="checkError('tin', 'required')"> PAN is required</mat-error>
+            <mat-error *ngIf="checkError('tin', 'pattern')"> Enter Valid PAN Number</mat-error>
+        </mat-form-field>
+       </div>
+       <div class="col-md-auto">
+        <button type="submit" [disabled]="!searchFormGroup.valid" mat-raised-button color="primary">Search Job Offers</button>
+       </div>
+    </div>
+  </form>
+    <div class="row mt-5">
+      <div class="col">
+        <table mat-table [dataSource]="dataSource" class="full-width">
+        
+          <!-- srNo Column -->
+          <ng-container matColumnDef="srNo">
+            <th mat-header-cell *matHeaderCellDef> Sr No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.srNo}} </td>
+          </ng-container>
+        
+          <!-- employerOrgName Column -->
+          <ng-container matColumnDef="employerOrgName">
+            <th mat-header-cell *matHeaderCellDef> Company </th>
+            <td mat-cell *matCellDef="let element"> {{element.employerOrgName}} </td>
+          </ng-container>
+        
+          <!-- offerUpdatedOn Column -->
+          <ng-container matColumnDef="offerUpdatedOn">
+            <th mat-header-cell *matHeaderCellDef> Offer Received Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.offerUpdatedOn}} </td>
+          </ng-container>
+        
+          <!-- Job Joining Date Column -->
+          <ng-container matColumnDef="joiningDate">
+            <th mat-header-cell *matHeaderCellDef> Job Joining Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.joiningDate}} </td>
+          </ng-container>
+
+           <!-- Job employerEmail Column -->
+           <ng-container matColumnDef="employerEmail">
+            <th mat-header-cell *matHeaderCellDef> Employer Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.employerEmail}} </td>
+          </ng-container>
+
+          <!-- Job Employment Offer Status Column -->
+          <ng-container matColumnDef="employmentOfferStatus">
+            <th mat-header-cell *matHeaderCellDef> Employment Offer Status</th>
+            <td mat-cell *matCellDef="let element"> {{element.employmentOfferStatus}} </td>
+          </ng-container>
+
+          <!-- Job employmentType Column -->
+          <ng-container matColumnDef="employmentType">
+            <th mat-header-cell *matHeaderCellDef> Employment Type</th>
+            <td mat-cell *matCellDef="let element"> {{element.employmentType}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </div>
+
+    </div>
   </div>
