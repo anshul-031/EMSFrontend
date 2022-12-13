@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserAuthService } from '../../_services/user-auth.service';
 import { UserService } from '../../_services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -32,6 +33,12 @@ export class LoginComponent implements OnInit {
       },
       (error) => {
         console.log(error);
+        Swal.fire({
+          title: 'Error!',
+          text: error.error,
+          icon: 'error',
+          confirmButtonText: 'Okay'
+        })
       }
     );
   }

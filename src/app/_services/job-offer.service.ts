@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -11,6 +11,19 @@ export class JobOfferService {
 
   public createJobOffers(jobOfferData: any) {
     return this.httpclient.post('/api-proxy/employer/employmentoffer', jobOfferData, {
+      headers: this.requestHeader,
+    });
+  }
+
+  public getAllEmploymentOffers(searchData: any) {
+    let queryParam = '?tin=';
+    if(searchData.tin && searchData.tin !== '') {
+      queryParam = queryParam + searchData.tin;
+    } 
+    if(searchData.employeecountry && searchData.employeecountry !== '') {
+      queryParam = queryParam + '&employeecountry=' + searchData.employeecountry;
+    } 
+    return this.httpclient.get('/api-proxy/employer/employmentoffer/search' + queryParam, {
       headers: this.requestHeader,
     });
   }

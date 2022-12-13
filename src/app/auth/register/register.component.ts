@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../shared/auth.service';
 import { UserService } from '../../_services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -37,7 +38,12 @@ export class RegisterComponent implements OnInit {
         if(error.status === 200) {
           this.router.navigate(['/login'])
         } else {
-          console.error(error)
+          Swal.fire({
+            title: 'Error!',
+            text: error.error,
+            icon: 'error',
+            confirmButtonText: 'Okay'
+          })
         }
       }
     );
