@@ -15,19 +15,19 @@ export class UserService {
   ) { }
 
   public login(loginData: any) {
-    return this.httpclient.post(environment.API_URL + '/register/signin', loginData, {
+    return this.httpclient.post('/api-proxy/register/signin', loginData, {
       headers: this.requestHeader,
     });
   }
 
   public register(data: any, role: string) {
     let path = '';
-    if(role === `"Employeer"`){
+    if (role === `"Employeer"`) {
       path = '/register/employer'
-    } else if(role === `"Employee"`) {
+    } else if (role === `"Employee"`) {
       path = '/register/employee'
     }
-    return this.httpclient.post(environment.API_URL + path, data, {
+    return this.httpclient.post("/api-proxy" + path, data, {
       headers: this.requestHeader,
     });
   }
