@@ -10,7 +10,7 @@ export class JobOfferService {
   constructor(private httpclient: HttpClient,) { }
 
   public createJobOffers(jobOfferData: any) {
-    return this.httpclient.post('/api-proxy/employer/employmentoffer', jobOfferData, {
+    return this.httpclient.post(environment.API_URL + '/employer/employmentoffer', jobOfferData, {
       headers: this.requestHeader,
     });
   }
@@ -23,7 +23,7 @@ export class JobOfferService {
     if(searchData.employeecountry && searchData.employeecountry !== '') {
       queryParam = queryParam + '&employeecountry=' + searchData.employeecountry;
     } 
-    return this.httpclient.get('/api-proxy/employer/employmentoffer/search' + queryParam, {
+    return this.httpclient.get(environment.API_URL + '/employer/employmentoffer/search' + queryParam, {
       headers: this.requestHeader,
     });
   }
