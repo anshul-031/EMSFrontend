@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class JobOfferService {
-  requestHeader = new HttpHeaders({ 'Content-type': 'application/json', "Access-Control-Allow-Origin": "http://localhost:4200", });
+  requestHeader = new HttpHeaders({ 'Content-type': 'application/json'});
   proxyURL = "https://cors-anywhere.herokuapp.com/";
 
   constructor(private httpclient: HttpClient,) { }
