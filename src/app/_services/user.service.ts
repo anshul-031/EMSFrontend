@@ -15,7 +15,7 @@ export class UserService {
   ) { }
 
   public login(loginData: any) {
-    return this.httpclient.post('/api-proxy/register/signin', loginData, {
+    return this.httpclient.post(environment.API_URL +'/register/signin', loginData, {
       headers: this.requestHeader,
     });
   }
@@ -30,7 +30,7 @@ export class UserService {
     if(!role){
       path = '/register/employer'
     }
-    return this.httpclient.post("/api-proxy" + path, data, {
+    return this.httpclient.post(environment.API_URL + path, data, {
       headers: this.requestHeader,
     });
   }
