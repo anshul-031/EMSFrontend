@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // API_URL: '/api-proxy'
-  API_URL: 'http://safehiring-env.eba-xjfk2sc2.us-east-1.elasticbeanstalk.com/v1/api',
+  API_URL: 'http://api.sechome.tech/v1/api',
 };
 
 /*
