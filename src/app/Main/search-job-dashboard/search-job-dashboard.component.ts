@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { JobOfferService } from 'src/app/_services/job-offer.service';
+import { JobOfferService } from '../../_services/job-offer.service';
+import { UserService } from '../../_services/user.service';
 import Swal from 'sweetalert2';
 
 export interface OffersElemnet {
@@ -26,7 +27,7 @@ export class SearchJobDashboardComponent implements OnInit {
   displayedColumns: string[] = ['srNo', 'offerUpdatedOn', 'joiningDate', 'employmentType', 'employerOrgName', 'employerEmail', 'employmentOfferStatus'];
   dataSource = ELEMENT_DATA;
   public searchFormGroup: FormGroup;
-  constructor(private jobOfferService: JobOfferService, private router: Router,) {
+  constructor(private jobOfferService: JobOfferService, private router: Router,private userService: UserService) {
     this.searchFormGroup = new FormGroup({
       tin : new FormControl('', [Validators.required, Validators.pattern("[A-Z]{5}[0-9]{4}[A-Z]{1}")]),
       employeecountry: new FormControl('India'),
@@ -38,7 +39,10 @@ export class SearchJobDashboardComponent implements OnInit {
   }
 
   searchOffer() {
-
+    if(this.userService.roleMatch(['EMPLOYER_UNPAID'])) {
+      this.userService.accessDenied();
+      return;
+    }
 
     this.jobOfferService.getAllEmploymentOffers(this.searchFormGroup.value).subscribe(
       (response: any) => {

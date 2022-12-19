@@ -40,20 +40,6 @@ export class LayoutComponent {
       icon: 'supervised_user_circle',
       color: '#ff7f0e',
       link: '/dashboard/add-job-offer',
-      // subMenu: [
-      //   {
-      //     title: 'Sales',
-      //     icon: 'money',
-      //     link: '/sales',
-      //     color: '#ff7f0e',
-      //   },
-      //   {
-      //     title: 'Customers',
-      //     icon: 'people',
-      //     color: '#ff7f0e',
-      //     link: '/customers',
-      //   },
-      // ],
     },
   ];
 }

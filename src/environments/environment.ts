@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API_URL: '/api-proxy'
+  // API_URL: '/api-proxy'
+  API_URL: 'http://api.sechome.tech/v1/api',
 };
 
 /*

@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { UserAuthService } from './user-auth.service';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ export class UserService {
   ) { }
 
   public login(loginData: any) {
-    return this.httpclient.post('/api-proxy/register/signin', loginData, {
+    return this.httpclient.post(environment.API_URL +'/register/signin', loginData, {
       headers: this.requestHeader,
     });
   }
@@ -30,25 +31,33 @@ export class UserService {
     if(!role){
       path = '/register/employer'
     }
-    return this.httpclient.post("/api-proxy" + path, data, {
+    return this.httpclient.post(environment.API_URL + path, data, {
       headers: this.requestHeader,
     });
+  }
+
+  public accessDenied() {
+    if(this.roleMatch(['EMPLOYER_UNPAID'])) {
+      Swal.fire({
+        title: 'Access Denied',
+        text: "You have not done payment",
+        icon: 'info',
+        confirmButtonText: 'Okay'
+      })
+      return;
+    }
   }
 
   public roleMatch(allowedRoles: any[]): any {
     let isMatch = false;
     const userRoles: any = this.userAuthService.getRoles();
-    console.info(userRoles, "userRoles")
     if (userRoles != null && userRoles) {
-      for (let i = 0; i < userRoles.length; i++) {
-        for (let j = 0; j < allowedRoles.length; j++) {
-          if (userRoles[i] === allowedRoles[j]) {
-            isMatch = true;
-            return isMatch;
-          } else {
-            return isMatch;
-          }
-        }
+      const foundRole = userRoles.some((role: string) => allowedRoles.includes(role));
+      if(foundRole) {
+        isMatch = true
+        return isMatch;
+      } else {
+        return isMatch;
       }
     }
   }
