@@ -16,6 +16,7 @@ import { UserAuthService } from '../../_services/user-auth.service';
       </button>
       <span class="title" routerLink="/">Dashboard</span>
       <span class="spacer"></span>
+      <app-razor-pay></app-razor-pay>
       <span class="welcome-text">Hello {{ setUserName() }}</span>
       <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>person_pin</mat-icon>

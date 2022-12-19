@@ -27,6 +27,8 @@ import { AddJobOfferComponent } from './Main/add-job-offer/add-job-offer.compone
 import { SearchJobDashboardComponent } from './Main/search-job-dashboard/search-job-dashboard.component';
 import { MaterialModule } from './material.module';
 import { JobOfferService } from './_services/job-offer.service';
+import { PaymentService } from './_services/payment.service';
+import { RazorPayComponent } from './payments/razor-pay/razor-pay.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +48,7 @@ import { JobOfferService } from './_services/job-offer.service';
     PageHeaderComponent,
     AddJobOfferComponent,
     SearchJobDashboardComponent,
+    RazorPayComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,7 @@ import { JobOfferService } from './_services/job-offer.service';
     },
     UserService,
     JobOfferService,
+    PaymentService,
   ],
   bootstrap: [AppComponent]
 })
