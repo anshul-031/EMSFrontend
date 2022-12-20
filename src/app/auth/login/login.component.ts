@@ -29,7 +29,11 @@ export class LoginComponent implements OnInit {
       (response: any) => {
         this.userAuthService.setToken(response.token);
         this.userAuthService.setRoles(this.userAuthService.parseJwt(response.token).roles);
-        this.router.navigate(['/dashboard'])
+        setTimeout(() => {
+          this.router.navigate(['/dashboard']);
+          console.info("called")
+        }, 500)
+        
       },
       (error) => {
         console.log(error);

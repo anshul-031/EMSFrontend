@@ -29,7 +29,7 @@ const routes: Routes = [
 		  {
 			path: '',
 			component: SearchJobDashboardComponent,
-			canActivate:[AuthGuard], data:{roles:['EMPLOYER', 'EMPLOYER_UNPAID']},
+			canActivate:[AuthGuard], data:{roles:['EMPLOYER', 'EMPLOYER_UNPAID', "EMPLOYEE_UNPAID", "EMPLOYEE"]},
 		  },
 		  {
 			path: 'add-job-offer',
