@@ -20,7 +20,7 @@ const routes: Routes = [
 	{ path: "forget", component: ForgetComponent },
 	{ path: "reset/:id", component: ResetComponent },
 	{ path: "pricing", component: PricingComponent },
-	{ path: "developer", component: DeveloperComponent, canActivate:[AuthGuard], data:{roles:['ADMIN']} },
+	{ path: "developer", component: DeveloperComponent },
 	{ path: 'forbidden', component: ForbiddenComponent },
 	{
 		path: 'dashboard',

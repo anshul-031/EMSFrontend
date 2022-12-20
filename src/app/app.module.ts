@@ -18,7 +18,6 @@ import { AuthInterceptor } from './_auth/auth.interceptor';
 import { AuthGuard } from './_auth/auth.guard.service';
 import { UserService } from './_services/user.service';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
-import { MainDashboardComponent } from './Main/main-dashboard/main-dashboard.component';
 import { LayoutComponent } from './Main/layout/layout.component';
 import { HeaderComponent } from './Main/layout/header.component';
 import { MenuItemComponent } from './Main/layout/menu-item/menu-item.component';
@@ -41,7 +40,6 @@ import { RazorPayComponent } from './payments/razor-pay/razor-pay.component';
     PricingComponent,
     DeveloperComponent,
     ForbiddenComponent,
-    MainDashboardComponent,
     LayoutComponent,
     HeaderComponent,
     MenuItemComponent,

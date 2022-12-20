@@ -43,6 +43,7 @@ img {
 	text-decoration: none;
 	color: #b36fd0;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 ul li .cta button {
 	padding: 10px 30px;
