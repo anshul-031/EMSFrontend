@@ -31,11 +31,36 @@ export class RegisterComponent implements OnInit {
     this.userService.register(this.registerForm.value, role as string).subscribe(
       (response: any) => {
         console.info(response, "response")
-        this.router.navigate(['/login'])
+        Swal.fire({
+          title: 'Success!',
+          text: 'Your user id and password created. validate user via email link and login to continue',
+          icon: 'success',
+          showConfirmButton: true,
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          allowEnterKey: false,
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.router.navigate(['/login'])
+          }
+        })
+        
       },
       (error) => {
         if(error.status === 200) {
-          this.router.navigate(['/login'])
+          Swal.fire({
+            title: 'Success!',
+            text: 'Your user id and password created. validate user via email link and login to continue',
+            icon: 'success',
+            showConfirmButton: true,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.router.navigate(['/login'])
+            }
+          })
         } else {
           Swal.fire({
             title: 'Error!',
