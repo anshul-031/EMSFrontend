@@ -121,9 +121,8 @@ export class RazorPayComponent implements OnInit {
   }
 
   logout(): void {
-    console.log('Logged out');
     this.userAuthService.clear();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
     setTimeout(() =>{
       window.location.reload();
     },300)
