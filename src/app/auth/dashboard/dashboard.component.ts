@@ -10,7 +10,7 @@ import { UserService } from '../../_services/user.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor(public dialog: MatDialog, private userAuthService: UserAuthService,
+  constructor(public dialog: MatDialog, public userAuthService: UserAuthService,
     private router: Router,
     public userService: UserService) {}
 

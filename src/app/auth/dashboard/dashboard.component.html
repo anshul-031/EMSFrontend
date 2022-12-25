@@ -13,12 +13,19 @@
 
 				</ul>
 				<ul class="nav-links" style="justify-content: flex-end;">
-					<li><a *ngIf="!isLoggedIn()" [routerLink]="['/login']">Login</a>
-						<a *ngIf="isLoggedIn()" (click)="logout()">Logout</a></li>
+					<li>
+						<a *ngIf="!isLoggedIn()" [routerLink]="['/login']">Login</a>
+					</li>
+					<li *ngIf="isLoggedIn()">
+						<span class="cta"><button [routerLink]="['/dashboard']"> Dashboard </button></span>
+						<ul>
+							<li class="cta"><button (click)="logout()">Logout</button></li>
+						</ul>
+					</li>
 					<li *ngIf="!isLoggedIn()">
 						<span (click)="openDialog()" class="cta"><button>Sign Up</button></span>
 						<ul>
-							<li class="cta"><button (click)="navigateByRole('Employee')" >Employee</button></li>
+							<li class="cta"><button (click)="navigateByRole('Employee')">Employee</button></li>
 							<li class="cta"><button (click)="navigateByRole('Employeer')">Employeer</button></li>
 						</ul>
 					</li>
