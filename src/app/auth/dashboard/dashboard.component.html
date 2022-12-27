@@ -25,8 +25,8 @@
 					<li *ngIf="!isLoggedIn()">
 						<span (click)="openDialog()" class="cta"><button>Sign Up</button></span>
 						<ul>
-							<li class="cta"><button (click)="navigateByRole('Employee')">Employee</button></li>
-							<li class="cta"><button (click)="navigateByRole('Employeer')">Employeer</button></li>
+							<!-- <li class="cta"><button (click)="navigateByRole('Employee')">Employee</button></li> -->
+							<li class="cta"><button (click)="navigateByRole('Employer')">Employer</button></li>
 						</ul>
 					</li>
 				</ul>
@@ -43,10 +43,8 @@
 	</h1>
 	<p class="text mt-5">
 		YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new
-		candidate.
-		It's an online database where Employers can post their job offers & inform other employers which candidate has
-		been
-		hired by which employer.
+		candidate. It's an online database where Employers can post their employment offers & inform other employers
+		which candidate has been hired by which employer.
 	</p>
 	<div class="button-container">
 		<a class="startexplore mb-4" (click)="openDialog()">Start Exploring</a>
@@ -57,7 +55,7 @@
 <div id="product" style="padding: 50px;">
 	<br> <br>
 	<h2>About Product</h2>
-	<p>There are many problems in hiring such as:</p>
+	<p>There are some challenges in hiring which employers face such as:</p>
 
 	<p>An employer gives a job offer letter to an employee. But that employee gets a few more offers before joining the
 		company; & sometimes the employee switches to the other company’s job offer,
@@ -71,50 +69,85 @@
 			candidate also might not join.</li>
 	</ol>
 	<br>
-	<p>YourEmployeeCheck is an online database where employers can update their job offers and give intimation to all
-		other
-		companies that this candidate is already hired by this employer. Also, the employer can enable real-time
-		tracking of
-		the job offer of a candidate as a result if their candidate is getting any other job offer from another
-		employer,
-		the previous employer would get an intimation.
+	<p>YourEmployeeCheck is an online database where employers can post their employment offers and give intimation to
+		all other employers that this candidate is already hired by this employer. Also, the employer can enable
+		real-time tracking of the employment offer of a candidate as a result if their candidate is getting any other
+		employment offer from another employer, the previous employer would get an intimation.
 		<br><br>
-		Also, an employer can search on the portal whether the new
-		candidate they are interviewing has already any other job
-		offer
-		or not.
+		Also, an employer can search on the portal whether the new candidate they are interviewing has already any other
+		employment offer or not.
 
 		As a result,
 	</p>
-
+</div>
+<div id="features" style="padding: 50px;">
 	<br>
-	<h2 id="features">Features</h2>
-
+	<h2>Features</h2>
 	<ol>
-		<li><b>Search job offers of an candidate: </b>Employers can search the number of job offers a new candidate
-			already
-			has before even interviewing.
-
-		<li><b>Real Time intimations of job offers refusal: </b>Employer can enable Real time intimations of job offers
-			rejection by the new candidate. In case of multiple job offers by many employer to an candidate, a candidate
-			can accept only
-			one offer letter at any point of time. Hence employers can be ready with the backups. </li>
-		<li><b> Real Time intimations of other job offers:</b> Real Time intimations of other job offers: Employer can
-			get
-			Real time intimations of other job offers of a new
-			candidate. In case of multiple offers, a candidate can accept only one offer letter at any point of time 7
-			has to reject other offers.
+		<li>
+			<b>Search job offers of an candidate: </b>
+			<p>Employers can search the number of employment offers a new candidate already has before even
+				interviewing.</p>
 		</li>
-		<li><b>Moonlighting Detection: </b>Employers can update their employees information on our portal, & Employees
-			working
-			simultaneously on another employer can be tracked. </li>
-		<li><b>Reliability:</b> A fast, better & reliable solution to track candidate’s availability.
+
+		<li>
+			<b>Reserve your candidate: </b>
+			<p>Employers can post their Employment offer details on our portal. Many Employers/Hiring Consultants
+				don't prefer to enter into competition i.e., they don't prefer to hire a candidate which is already
+				having multiple employment offers because they probablity of joining is very less.
+			</p>
+		</li>
+
+		<li>
+			<b>Real Time intimations of job offers refusal: </b>
+			<p>
+				Employer can enable Real time intimations of job offers
+				rejection by the new candidate. In case of multiple job offers by many employer to an candidate, a
+				candidate
+				can accept only one offer letter at any point of time. Hence employers can be ready with the backups.
+			</p>
+		</li>
+		<li>
+			<b> Real Time intimations of other job offers:</b>
+			<p>
+				Real Time intimations of other job offers: Employer can
+				get Real time intimations of other job offers of a new candidate. In case of multiple offers, a
+				candidate
+				can accept only one offer letter at any point of time 7
+				has to reject other offers.
+			</p>
+		</li>
+		<li>
+			<b>Moonlighting Detection: (will launch in Future) </b>
+			<p>
+				Employers can update their employees information on our portal, & Employees
+				working simultaneously on another employer can be tracked.
+			</p>
+		</li>
+		<li>
+			<b>Reliability:</b>
+			<p>
+				A fast, better & reliable solution to track candidate’s availability.
+			</p>
+		</li>
+		<li>
+			<b>Integrate our API's:</b>
+			<p>
+				You don't have to do anything manually, Just integrate our API's directly with your HR related
+				softwares. For more details please visit our Developer Section.
+			</p>
 		</li>
 	</ol>
 	<br>
-	<h2 id="contactus">Contact Us</h2>
+</div>
+<div id="contactus" style="padding: 50px;">
+	<br>
+	<h2>Contact Us</h2>
+	<p>
+		Your Feedback is highly valuable to us so you can directly contact our senior management.
+	</p>
 	<ul>
-		<li><b>Email: </b> YourEmployeeCheck@gmail.com </li>
+		<li><b>Email: </b> ceo@youremployeecheck.com </li>
 		<li><b>Whatsapp Number: </b> +91-8285867446 </li>
 	</ul>
 </div>

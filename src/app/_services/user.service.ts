@@ -16,19 +16,19 @@ export class UserService {
   ) { }
 
   public login(loginData: any) {
-    return this.httpclient.post(environment.API_URL +'/register/signin', loginData, {
+    return this.httpclient.post(environment.API_URL + '/register/signin', loginData, {
       headers: this.requestHeader,
     });
   }
 
   public register(data: any, role: string) {
     let path = '';
-    if (role === `"Employeer"`) {
+    if (role === `"Employer"`) {
       path = '/register/employer'
     } else if (role === `"Employee"`) {
       path = '/register/employee'
     }
-    if(!role){
+    if (!role) {
       path = '/register/employer'
     }
     return this.httpclient.post(environment.API_URL + path, data, {
@@ -37,7 +37,7 @@ export class UserService {
   }
 
   public accessDenied() {
-    if(this.roleMatch(['EMPLOYER_UNPAID'])) {
+    if (this.roleMatch(['EMPLOYER_UNPAID'])) {
       Swal.fire({
         title: 'Access Denied',
         text: "You have not done payment",
@@ -53,7 +53,7 @@ export class UserService {
     const userRoles: any = this.userAuthService.getRoles();
     if (userRoles != null && userRoles) {
       const foundRole = userRoles.some((role: string) => allowedRoles.includes(role));
-      if(foundRole) {
+      if (foundRole) {
         isMatch = true
         return isMatch;
       } else {
