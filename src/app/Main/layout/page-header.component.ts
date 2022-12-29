@@ -43,6 +43,10 @@ import { Component, Input } from '@angular/core';
         height: 30px;
       }
 
+      .title > h2 {
+        margin-bottom: 0;
+      }
+
       .feature-header > .start {
         display: flex;
         flex-direction: column;

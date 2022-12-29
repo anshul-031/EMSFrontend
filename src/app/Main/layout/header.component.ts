@@ -14,7 +14,7 @@ import { UserAuthService } from '../../_services/user-auth.service';
       <button (click)="menuToggled.emit(true)" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
-      <span class="title" routerLink="/">Dashboard</span>
+      <span class="title" routerLink="/dashboard">YourEmployeeCheck</span>
       <span class="spacer"></span>
       <app-razor-pay></app-razor-pay>
       <span class="welcome-text">Hello {{ setUserName() }}</span>

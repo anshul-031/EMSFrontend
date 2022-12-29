@@ -36,10 +36,10 @@ export class LayoutComponent {
       color: '#ff7f0e',
     },
     {
-      title: 'Add job offer',
+      title: 'Reserve a candidate',
       icon: 'supervised_user_circle',
       color: '#ff7f0e',
-      link: '/dashboard/add-job-offer',
+      link: '/dashboard/reserve-candidate',
     },
   ];
 }
