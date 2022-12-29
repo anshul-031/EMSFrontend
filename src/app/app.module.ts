@@ -28,6 +28,7 @@ import { MaterialModule } from './material.module';
 import { JobOfferService } from './_services/job-offer.service';
 import { PaymentService } from './_services/payment.service';
 import { RazorPayComponent } from './payments/razor-pay/razor-pay.component';
+import { NavigationComponent } from './auth/navigation/navigation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { RazorPayComponent } from './payments/razor-pay/razor-pay.component';
     AddJobOfferComponent,
     SearchJobDashboardComponent,
     RazorPayComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,

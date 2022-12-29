@@ -1,5 +1,5 @@
 <app-page-header icon="supervised_user_circle">
-  <h2>Add Job Offer</h2>
+  <h2>Reserve a candidate</h2>
   <button routerLink="/dashboard" mat-flat-button color="primary" class="action">
     <mat-icon class="mr-2">dashboard</mat-icon>
     <span>Go Back</span>
@@ -10,13 +10,6 @@
   <div class="row">
     <div class="col-6">
       <form [formGroup]="addJobFormGroup" (ngSubmit)="onSubmit()" class="example-form">
-        <!-- <p>
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Employee Register Number</mat-label>
-            <input matInput formControlName="ern">
-            <mat-error *ngIf="checkError('ern', 'required')"> Employee Register Number is required</mat-error>
-          </mat-form-field>
-        </p> -->
 
         <p>
           <mat-form-field class="full-width" appearance="outline">
@@ -74,7 +67,8 @@
         </p>
 
         <p>
-          <mat-slide-toggle formControlName="enableEmploymentOfferMonitoring"> Offer Status Monitoring </mat-slide-toggle>
+          <mat-slide-toggle formControlName="enableEmploymentOfferMonitoring"> Offer Status Monitoring
+          </mat-slide-toggle>
         </p>
 
         <button type="submit" mat-raised-button color="primary" [disabled]="!addJobFormGroup.valid">Submit</button>

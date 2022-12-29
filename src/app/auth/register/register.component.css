@@ -17,6 +17,12 @@
   gap: 1rem;
   justify-content: center;
 }
+.brand h1 {
+  margin-bottom: 0;
+}
+.brand img {
+  cursor: pointer;
+}
 img {
   height: 5rem;
 }
