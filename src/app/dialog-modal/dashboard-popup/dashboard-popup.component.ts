@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
@@ -7,13 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard-popup.component.html',
   styleUrls: ['./dashboard-popup.component.css']
 })
-export class DashboardPopupComponent implements OnInit {
+export class DashboardPopupComponent {
 
   constructor(public dialog: MatDialog,private router:Router) {}
   selected:any;
-  ngOnInit(): void {
-    //this.selected=""
-  }
   submit(){
     this.dialog.closeAll();
     localStorage.setItem("role",JSON.stringify(this.selected))

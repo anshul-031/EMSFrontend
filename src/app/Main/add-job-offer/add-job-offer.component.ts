@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { JobOfferService } from '../../_services/job-offer.service';
@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./add-job-offer.component.css'],
   providers: [ DatePipe ]
 })
-export class AddJobOfferComponent implements OnInit {
+export class AddJobOfferComponent {
   public addJobFormGroup: FormGroup;
   employmentTypes = [
     {value: 'JOB', viewValue: 'Job'},
@@ -33,9 +33,6 @@ export class AddJobOfferComponent implements OnInit {
       enableEmploymentOfferMonitoring : new FormControl(true),
 
     });
-  }
-
-  ngOnInit(): void {
   }
 
   public checkError = (controlName: string, errorName: string) => {

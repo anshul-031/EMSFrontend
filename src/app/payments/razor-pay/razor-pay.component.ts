@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PaymentService } from '../../_services/payment.service';
 import { UserService } from '../../_services/user.service';
 import { UserAuthService } from '../../_services/user-auth.service';
@@ -11,12 +11,9 @@ declare var Razorpay: any;
   templateUrl: './razor-pay.component.html',
   styleUrls: ['./razor-pay.component.css']
 })
-export class RazorPayComponent implements OnInit {
+export class RazorPayComponent {
 
   constructor(public userService: UserService, private paymentService: PaymentService, private userAuthService: UserAuthService, private router: Router,) { }
-
-  ngOnInit(): void {
-  }
 
 
   payNow() {

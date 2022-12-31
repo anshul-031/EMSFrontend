@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -7,14 +7,12 @@ import { Router } from '@angular/router';
   templateUrl: './forget.component.html',
   styleUrls: ['./forget.component.css']
 })
-export class ForgetComponent implements OnInit {
+export class ForgetComponent {
 
   constructor(private fb: FormBuilder, private router: Router) { }
   forgetForm = this.fb.group({
     emailId: ''
   })
-  ngOnInit(): void {
-  }
   submit() {
     console.info(this.forgetForm.value)
   }

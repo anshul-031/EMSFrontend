@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { JobOfferService } from '../../_services/job-offer.service';
@@ -23,7 +23,7 @@ const ELEMENT_DATA: OffersElemnet[] = [];
   templateUrl: './search-job-dashboard.component.html',
   styleUrls: ['./search-job-dashboard.component.css']
 })
-export class SearchJobDashboardComponent implements OnInit {
+export class SearchJobDashboardComponent {
   displayedColumns: string[] = ['srNo', 'offerUpdatedOn', 'joiningDate', 'employmentType', 'employerOrgName', 'employerEmail', 'employmentOfferStatus'];
   dataSource = ELEMENT_DATA;
   public searchFormGroup: FormGroup;
@@ -33,10 +33,6 @@ export class SearchJobDashboardComponent implements OnInit {
       employeecountry: new FormControl('India'),
     });
    }
-
-
-  ngOnInit(): void {
-  }
 
   searchOffer() {
     if(this.userService.roleMatch(['EMPLOYER_UNPAID'])) {
