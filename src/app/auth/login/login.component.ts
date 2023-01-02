@@ -21,10 +21,13 @@ export class LoginComponent {
     username: ['', Validators.required],
     userpwd: ['', Validators.required]
   })
+  loading = false;
 
   submit() {
+    this.loading = true;
     this.userService.login(this.loginForm.value).subscribe(
       (response: any) => {
+        this.loading = false;
         this.userAuthService.setToken(response.token);
         this.userAuthService.setRoles(this.userAuthService.parseJwt(response.token).roles);
         setTimeout(() => {
@@ -35,6 +38,7 @@ export class LoginComponent {
       },
       (error) => {
         console.log(error);
+        this.loading = false;
         Swal.fire({
           title: 'Error!',
           text: error.error,

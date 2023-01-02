@@ -13,6 +13,7 @@ export class RegisterComponent {
 
   constructor(private fb: FormBuilder, private router: Router, private userService: UserService,) {
   }
+  loading = false;
   registerForm = this.fb.group({
     email: ['', Validators.required],
     mobile: ['', Validators.required],
@@ -27,9 +28,11 @@ export class RegisterComponent {
 
     const role = localStorage.getItem("role");
     console.info(this.registerForm.value)
+    this.loading = true;
     this.userService.register(this.registerForm.value, role as string).subscribe(
       (response: any) => {
         console.info(response, "response")
+        this.loading = false;
         Swal.fire({
           title: 'Success!',
           text: 'Your user id and password created. validate user via email link and login to continue',
@@ -47,6 +50,7 @@ export class RegisterComponent {
       },
       (error) => {
         if (error.status === 200) {
+          this.loading = false;
           Swal.fire({
             title: 'Success!',
             text: 'Your user id and password created. validate user via email link and login to continue',
@@ -61,6 +65,7 @@ export class RegisterComponent {
             }
           })
         } else {
+          this.loading = false;
           Swal.fire({
             title: 'Error!',
             text: error.error,
