@@ -29,6 +29,7 @@ import { JobOfferService } from './_services/job-offer.service';
 import { PaymentService } from './_services/payment.service';
 import { RazorPayComponent } from './payments/razor-pay/razor-pay.component';
 import { NavigationComponent } from './auth/navigation/navigation.component';
+import { SeoService } from './_services/seo.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,6 +70,7 @@ import { NavigationComponent } from './auth/navigation/navigation.component';
     UserService,
     JobOfferService,
     PaymentService,
+    SeoService,
   ],
   bootstrap: [AppComponent]
 })

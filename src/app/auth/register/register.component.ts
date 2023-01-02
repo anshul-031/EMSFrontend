@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../_services/user.service';
 import Swal from 'sweetalert2';
-import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-register',
@@ -12,10 +11,8 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class RegisterComponent {
 
-  constructor(private fb: FormBuilder, private router: Router, private userService: UserService, private metaService: Meta,
-    private titleService: Title,) { 
-      this.addTag();
-    }
+  constructor(private fb: FormBuilder, private router: Router, private userService: UserService,) {
+  }
   registerForm = this.fb.group({
     email: ['', Validators.required],
     mobile: ['', Validators.required],
@@ -25,14 +22,6 @@ export class RegisterComponent {
     referredBy: '',
     password: ['', Validators.required]
   })
-
-  addTag() {
-    this.titleService.setTitle("Register | YourEmployeeCheck")
-    this.metaService.updateTag({ name: 'description', content: "Register | YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new candidate. It's an online database where Employers can post their employment offers & inform other employers which candidate has been hired by which employer." });
-    this.metaService.addTag({ name: 'robots', content: 'index,follow' });
-    this.metaService.updateTag({ property: 'og:title', content: 'Register | YourEmployeeCheck' });
-    this.metaService.updateTag({ property: 'og:url', content: 'https://youremployeecheck.com/register' });
-  }
 
   submit() {
 
@@ -54,10 +43,10 @@ export class RegisterComponent {
             this.router.navigate(['/login'])
           }
         })
-        
+
       },
       (error) => {
-        if(error.status === 200) {
+        if (error.status === 200) {
           Swal.fire({
             title: 'Success!',
             text: 'Your user id and password created. validate user via email link and login to continue',
