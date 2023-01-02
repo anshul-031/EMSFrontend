@@ -18,7 +18,7 @@
         <!-- <input formControlName="password" type="password" name="password" id="" placeholder="Confirm Password" /> -->
       </div>
     </div>
-    <button [disabled]="registerForm.pristine || registerForm.invalid" type="submit" name="" id="">Register</button>
+    <button [disabled]="registerForm.pristine || registerForm.invalid || loading" [class.spinner]="loading"  type="submit" name="" id="">Register</button>
     <span> Already have an account ? <a [routerLink]="['/login']">Login</a> </span>
   </form>
 </div>

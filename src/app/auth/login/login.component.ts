@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserAuthService } from '../../_services/user-auth.service';
@@ -10,23 +10,24 @@ import Swal from 'sweetalert2';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   constructor(private fb: FormBuilder,
     private router: Router,
     private userService: UserService,
-    private userAuthService: UserAuthService,) { }
+    private userAuthService: UserAuthService,) {
+     }
   loginForm = this.fb.group({
     username: ['', Validators.required],
     userpwd: ['', Validators.required]
   })
-
-  ngOnInit(): void {
-  }
+  loading = false;
 
   submit() {
+    this.loading = true;
     this.userService.login(this.loginForm.value).subscribe(
       (response: any) => {
+        this.loading = false;
         this.userAuthService.setToken(response.token);
         this.userAuthService.setRoles(this.userAuthService.parseJwt(response.token).roles);
         setTimeout(() => {
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
       },
       (error) => {
         console.log(error);
+        this.loading = false;
         Swal.fire({
           title: 'Error!',
           text: error.error,

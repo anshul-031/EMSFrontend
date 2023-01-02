@@ -10,7 +10,7 @@
           <input formControlName="userpwd" type="password" name="userpwd" id="" placeholder="Password" />
         </div>
       </div>
-      <button type="submit" [disabled]="loginForm.pristine || loginForm.invalid" type="submit" name="" id="">Login</button>
+      <button type="submit" [disabled]="loginForm.pristine || loginForm.invalid || loading" [class.spinner]="loading" type="submit" name="" id="">Login</button>
       <span> Create an account ? <a [routerLink]="['/register']" >Register</a> </span>
     </form>
   </div>

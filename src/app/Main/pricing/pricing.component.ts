@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import { DashboardPopupComponent } from '../../dialog-modal/dashboard-popup/dashboard-popup.component';
 
@@ -7,17 +7,13 @@ import { DashboardPopupComponent } from '../../dialog-modal/dashboard-popup/dash
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.css']
 })
-export class PricingComponent implements OnInit {
+export class PricingComponent {
 
-  constructor(public dialog: MatDialog,) {
-
-  }
-
-  ngOnInit(): void {
+  constructor(public dialog: MatDialog) {
   }
 
   openDialog() {
-     this.dialog.open(DashboardPopupComponent);
+    this.dialog.open(DashboardPopupComponent);
   }
 
 }

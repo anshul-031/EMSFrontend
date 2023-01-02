@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { UserAuthService } from '../../_services/user-auth.service';
 import { MatDialog,MatDialogRef } from "@angular/material/dialog";
 import { DashboardPopupComponent } from '../../dialog-modal/dashboard-popup/dashboard-popup.component';
@@ -9,13 +9,10 @@ import { Router } from '@angular/router';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 
   constructor(public dialog: MatDialog,private userAuthService: UserAuthService,
     private router: Router,) { }
-
-  ngOnInit(): void {
-  }
 
   openDialog() {
     const dialogRef = this.dialog.open(DashboardPopupComponent);
