@@ -40,7 +40,17 @@ const routes: Routes = [
 			}
 		}
 	},
-	{ path: "", component: DashboardComponent },
+	{ path: "", component: DashboardComponent, data: {
+		seo: {
+			title: 'YourEmployeeCheck',
+			metaTags: [
+				{ name: 'description', content: "YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new candidate. It's an online database where Employers can post their employment offers & inform other employers which candidate has been hired by which employer." },
+				{ property: 'og:title', content: 'YourEmployeeCheck' },
+				{ proprety: 'og:description', content: "YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new candidate. It's an online database where Employers can post their employment offers & inform other employers which candidate has been hired by which employer." },
+				{ property: 'og:url', content: 'https://youremployeecheck.com/' },
+			]
+		}
+	}  },
 	{ path: "forget", component: ForgetComponent },
 	{ path: "reset/:id", component: ResetComponent },
 	{
@@ -77,12 +87,28 @@ const routes: Routes = [
 			{
 				path: '',
 				component: SearchJobDashboardComponent,
-				canActivate: [AuthGuard], data: { roles: ['EMPLOYER', 'EMPLOYER_UNPAID', "EMPLOYEE_UNPAID", "EMPLOYEE"] },
+				canActivate: [AuthGuard], data: { roles: ['EMPLOYER', 'EMPLOYER_UNPAID', "EMPLOYEE_UNPAID", "EMPLOYEE"], seo: {
+					title: 'Dashboard | YourEmployeeCheck',
+					metaTags: [
+						{ name: 'description', content: "Dashboard | YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new candidate. It's an online database where Employers can post their employment offers & inform other employers which candidate has been hired by which employer." },
+						{ property: 'og:title', content: 'Dashboard | YourEmployeeCheck' },
+						{ proprety: 'og:description', content: "Dashboard | YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new candidate. It's an online database where Employers can post their employment offers & inform other employers which candidate has been hired by which employer." },
+						{ property: 'og:url', content: 'https://youremployeecheck.com/dashboard' },
+					]
+				} },
 			},
 			{
 				path: 'reserve-candidate',
 				component: AddJobOfferComponent,
-				canActivate: [AuthGuard], data: { roles: ['EMPLOYER', 'EMPLOYER_UNPAID', 'EMPLOYEE_UNPAID'] },
+				canActivate: [AuthGuard], data: { roles: ['EMPLOYER', 'EMPLOYER_UNPAID', 'EMPLOYEE_UNPAID'], seo: {
+					title: 'Reserve a Candidate | YourEmployeeCheck',
+					metaTags: [
+						{ name: 'description', content: "Reserve a Candidate | YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new candidate. It's an online database where Employers can post their employment offers & inform other employers which candidate has been hired by which employer." },
+						{ property: 'og:title', content: 'Reserve a Candidate | YourEmployeeCheck' },
+						{ proprety: 'og:description', content: "Reserve a Candidate | YourEmployeeCheck is an initiative to ease out some of the challenges faced by Employers while hiring a new candidate. It's an online database where Employers can post their employment offers & inform other employers which candidate has been hired by which employer." },
+						{ property: 'og:url', content: 'https://youremployeecheck.com/dashboard/reserve-candidate' },
+					]
+				} },
 			}
 		]
 	}
