@@ -9,7 +9,7 @@ import { filter, map, mergeMap, tap } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'hremployeeportal';
+  title = 'YourEmployeeCheck';
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private seoService: SeoService) {
 
   }
