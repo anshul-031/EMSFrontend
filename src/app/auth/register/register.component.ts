@@ -35,7 +35,7 @@ export class RegisterComponent {
         this.loading = false;
         Swal.fire({
           title: 'Success!',
-          text: 'Your user id and password created. validate user via email link and login to continue',
+          text: 'Please verify your email by clicking on the link on the email',
           icon: 'success',
           showConfirmButton: true,
           allowOutsideClick: false,
@@ -53,7 +53,7 @@ export class RegisterComponent {
           this.loading = false;
           Swal.fire({
             title: 'Success!',
-            text: 'Your user id and password created. validate user via email link and login to continue',
+            text: 'Please verify your email by clicking on the link on the email',
             icon: 'success',
             showConfirmButton: true,
             allowOutsideClick: false,
