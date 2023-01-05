@@ -46,7 +46,7 @@ export class RazorPayComponent {
       "key": secretKey, // Enter the Key ID generated from the Dashboard
       "amount": amount.toString(), // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
-      "name": "Safe Hiring",
+      "name": "YourEmployeeCheck",
       "description": description,
       "image": "/assets/YourEmployeeCheckLogo.jpg",
       "order_id": razorpayOrderId, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
@@ -57,7 +57,7 @@ export class RazorPayComponent {
 
       "notes": {
           "description": description,
-          "company_name": "[['Safe Hiring']]",
+          "company_name": "[['YourEmployeeCheck']]",
       },
       "theme": {
           "color": "#004A55"
@@ -119,7 +119,7 @@ export class RazorPayComponent {
 
   logout(): void {
     this.userAuthService.clear();
-    this.router.navigate(['/']);
+    this.router.navigate(['/login']);
     setTimeout(() =>{
       window.location.reload();
     },300)
