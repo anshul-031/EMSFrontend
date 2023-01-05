@@ -35,7 +35,10 @@ export class RegisterComponent {
         this.loading = false;
         Swal.fire({
           title: 'Success!',
-          text: 'Your user id and password created. validate user via email link and login to continue',
+          html:
+            'Your user id and password created. <br>' +
+            'Please verify your email by clicking on the link on the email to proceed. <br> ' +
+            'If facing any issue, Please contact at ceo@youremployeecheck.com. or whatsapp at +91-8285867446',
           icon: 'success',
           showConfirmButton: true,
           allowOutsideClick: false,
@@ -53,7 +56,10 @@ export class RegisterComponent {
           this.loading = false;
           Swal.fire({
             title: 'Success!',
-            text: 'Your user id and password created. validate user via email link and login to continue',
+            html:
+              'Your user id and password created. <br>' +
+              'Please verify your email by clicking on the link on the email to proceed. <br> ' +
+              'If facing any issue, Please contact at ceo@youremployeecheck.com. or whatsapp at +91-8285867446',
             icon: 'success',
             showConfirmButton: true,
             allowOutsideClick: false,
