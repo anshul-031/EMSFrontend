@@ -1,17 +1,19 @@
 <div class="formConatiner">
-    <form autoComplete="off" (ngSubmit)="submit()" [formGroup]="loginForm" novalidate>
-      <div class="brand">
-        <img src="/assets/YourEmployeeCheckLogo.jpg" [routerLink]="['/']" alt="" srcSet="" />
-        <h1>EMS</h1>
-      </div>
-      <div class="conatiner">
-        <div class="col-md-6">
+  <form autoComplete="off" (ngSubmit)="submit()" [formGroup]="loginForm" novalidate>
+    <div class="brand">
+      <img src="/assets/YourEmployeeCheckLogo.jpg" width="80" height="80" [routerLink]="['/']" alt="" srcSet="" />
+      <h1>EMS</h1>
+    </div>
+    <div class="conatiner">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
           <input formControlName="username" type="email" name="username" id="" placeholder="Email Id" />
           <input formControlName="userpwd" type="password" name="userpwd" id="" placeholder="Password" />
         </div>
       </div>
-      <button type="submit" [disabled]="loginForm.pristine || loginForm.invalid || loading" [class.spinner]="loading" type="submit" name="" id="">Login</button>
-      <span> Create an account ? <a [routerLink]="['/register']" >Register</a> </span>
-    </form>
-  </div>
-  
+    </div>
+    <button type="submit" [disabled]="loginForm.pristine || loginForm.invalid || loading" [class.spinner]="loading"
+      type="submit" name="" id="">Login</button>
+    <span> Create an account ? <a [routerLink]="['/register']">Register</a> </span>
+  </form>
+</div>

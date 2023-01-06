@@ -1,6 +1,4 @@
-*,body{
-  background-color: #131324;
-}
+
 .formConatiner{
     height: 100vh; 
     width: 100vw;
@@ -9,7 +7,9 @@
     justify-content: center;
     gap: 1rem;
     align-items: center;
-    overflow: hidden;
+    overflow: auto;
+    background-color: #131324;
+    padding: 0 30px;
 }
  .brand {
   display: flex;
@@ -43,7 +43,7 @@ form {
   padding: 1rem;
   border: 0.1rem solid #4e0eff;
   border-radius: 0.4rem;
-  margin: 10px;
+  margin: 10px 0;
   color: white;
   width: 100%;
   font-size: 1rem;
@@ -81,4 +81,15 @@ span a {
   color: #4e0eff;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media (max-width: 575.98px) { 
+  .formConatiner {
+    padding: 16px;
+    display: block;
+  }
+  form {
+    padding: 16px;
+    border-radius: 16px;
+  }
 }

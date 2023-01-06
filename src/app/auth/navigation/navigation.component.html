@@ -1,36 +1,61 @@
 <div class="header">
     <header>
-        <div style="display: flex">
-            <nav class="navbar navbar-expand-lg navbar-light custom-navbar" style="justify-content: center;">
-                <img height="50px" src="/assets/YourEmployeeCheckLogo.jpg" />
-                <ul class="nav-links" style="margin-left: auto">
-                    <li><a [routerLink]="['/']">Home</a></li>
-                    <li><a href="#product">Product</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a [routerLink]="['/developer']">Developers</a></li>
-                    <li><a [routerLink]="['/pricing']">Pricing</a></li>
-                    <li><a href="#contactus">Contact Us</a></li>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" [routerLink]="['/']"><img height="50px" width="50px"
+                        src="/assets/YourEmployeeCheckLogo.jpg" alt="logo" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" [routerLink]="['/']">Home</a>
+                        </li>
 
-                </ul>
-                <ul class="nav-links" style="justify-content: flex-end;">
-                    <li>
-                        <a *ngIf="!isLoggedIn()" [routerLink]="['/login']">Login</a>
-                    </li>
-                    <li *ngIf="isLoggedIn()">
-                        <span class="cta"><button [routerLink]="['/dashboard']"> Dashboard </button></span>
-                        <ul>
-                            <li class="cta"><button (click)="logout()">Logout</button></li>
-                        </ul>
-                    </li>
-                    <li *ngIf="!isLoggedIn()">
-                        <span (click)="openDialog()" class="cta"><button>Sign Up</button></span>
-                        <ul>
-                            <!-- <li class="cta"><button (click)="navigateByRole('Employee')">Employee</button></li> -->
-                            <li class="cta"><button (click)="navigateByRole('Employer')">Employer</button></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#product">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/developer']">Developers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/pricing']">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactus">Contact Us</a>
+                        </li>
+
+
+                        <li class="nav-item" *ngIf="!isLoggedIn()">
+                            <a class="nav-link" [routerLink]="['/login']">Login</a>
+                        </li>
+                        <li class="nav-item dropdown" *ngIf="!isLoggedIn()">
+                            <a class="btn btn-custom dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Sign Up
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" (click)="navigateByRole('Employer')">Employer</a></li>
+                                <!-- <li><a class="dropdown-item" (click)="navigateByRole('Employee')">Employee</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" *ngIf="isLoggedIn()">
+                            <a class="btn btn-custom dropdown-toggle" [routerLink]="['/dashboard']" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dashboard
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 </div>

@@ -26,12 +26,12 @@ h1 .h1-heading span {
 	-webkit-text-fill-color: transparent;
 }
 .text {
-	font-family: gilroy-regular;
 	font-size: 22px;
 	width: 80%;
 	margin: auto;
 	margin-bottom: 40px;
 	color: #fff;
+	line-height: normal;
 }
 .button-container {
 	width: 40%;
@@ -153,3 +153,19 @@ h1 .h1-heading span {
 .fs-17 {
 	font-size: 17px;
 }
+
+#product,#features,#contactus {
+	padding: 50px;
+}
+
+@media (max-width: 575.98px) { 
+	h1 {
+		font-size: 40px;
+	}
+	.button-container {
+		width: 60%;
+	}
+	#product,#features,#contactus {
+		padding: 16px;
+	}
+ }
