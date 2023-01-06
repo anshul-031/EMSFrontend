@@ -17,11 +17,13 @@ import { UserAuthService } from '../../_services/user-auth.service';
       <span class="title" routerLink="/dashboard">YourEmployeeCheck</span>
       <span class="spacer"></span>
       <app-razor-pay></app-razor-pay>
-      <span class="welcome-text">Hello {{ setUserName() }}</span>
       <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>person_pin</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+          <span>{{ setUserName() }}</span>
+        </button>
         <button mat-menu-item (click)="logout()">
           <span>Logout</span>
         </button>
