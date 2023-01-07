@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_URL: 'https://api.sechome.tech/v1/api',
+  API_URL: 'http://api.youremployeecheck.com/v1/api',
 };
