@@ -1,6 +1,17 @@
 .container {
     padding: 0 30px;
-    margin-top: 125px;
+}
+
+.pricing-banner-main {
+	width: 100%;
+	display: flex;
+	margin-top: 76px;
+}
+
+.pricing-banner-main img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
 }
 
 
